@@ -1,0 +1,13 @@
+# Function that allows you to get salary data of each team
+#' importFrom dplyr %>% 
+
+getTeamSalary <- function (team_code) {
+  url <- paste0("https://www.basketball-reference.com/contracts/", stringr::(team_code), ".html")
+  tables <- 
+    rvest::read_html(url) %>% 
+    rvest::html_table()
+  df <- tables[[1]] %>% 
+    as.data.frame()
+  colnames(df) <- df[1,]
+  df[-1,]
+}
