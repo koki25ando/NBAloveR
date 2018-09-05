@@ -1,9 +1,17 @@
 Package: NBAloveR
-Title: What the Package Does (one line, title case)
+Title: R package that helps you analyze basketball data easily,
+    mainly this package is focused on helping users get the latest
+    basketball stats data.
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: person("Koki", "Ando", email = "koki.25.ando@gmail.com", role = c("aut", "cre"))
+Description: NBAloveR helps you analyze basketball data,
+    the package mainly helps you get online basketball data easily.
 Depends: R (>= 3.3.2)
-License: What license is it under?
+License: GPL-2
+import:
+    magrittr (>= 1.5),
+    dplyr,
+    tibble
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.0
