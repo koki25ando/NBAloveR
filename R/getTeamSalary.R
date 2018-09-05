@@ -1,5 +1,8 @@
 # Function that allows you to get salary data of each team
+#' @param team_code 3-characters team code
+#' 
 #' @importFrom dplyr %>% 
+#' @export
 
 getTeamSalary <- function (team_code) {
   url <- paste0("https://www.basketball-reference.com/contracts/", stringr::str_to_upper(team_code), ".html")
