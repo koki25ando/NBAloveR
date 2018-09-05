@@ -1,3 +1,4 @@
+# Function for getting summary stats
 #' function for getting given player's career summary stats
 #' @param Name palyers name
 #' 
