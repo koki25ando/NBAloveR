@@ -1,6 +1,7 @@
 # Function for getting Franchises' data: founded year, W/L percentage, number of division/conf/league championship
-#' @importFrom dplyr %>% 
-
+#' @importFrom dplyr %>%
+#' @export
+#'
 getFranchise <- function () {
   url <- "https://www.basketball-reference.com/teams/"
   page <- xml2::read_html(url)
