@@ -2,7 +2,7 @@
 #' importFrom dplyr %>% 
 
 getTeamSalary <- function (team_code) {
-  url <- paste0("https://www.basketball-reference.com/contracts/", stringr::(team_code), ".html")
+  url <- paste0("https://www.basketball-reference.com/contracts/", stringr::str_to_upper(team_code), ".html")
   tables <- 
     rvest::read_html(url) %>% 
     rvest::html_table()
