@@ -1,5 +1,4 @@
 # Function for getting Franchises' data: founded year, W/L percentage, number of division/conf/league championship
-#' 
 
 getFranchise <- function () {
   url <- "https://www.basketball-reference.com/teams/"
