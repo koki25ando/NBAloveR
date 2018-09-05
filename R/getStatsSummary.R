@@ -1,9 +1,8 @@
-# function for getting given player's career summary stats
+#' function for getting given player's career summary stats
 #' @param Name palyers name
 #' 
 #' @import magrittr
 #' @export
-
 getStatsSummary <- function (Name) {
   players_season_stats <- data.table::fread("https://s3-ap-southeast-2.amazonaws.com/playerinfomation/Seasons_Stats.csv", data.table = FALSE)
   players_season_stats$Player <- stringr::str_remove(players_season_stats$Player, "\\*")

@@ -1,7 +1,6 @@
-# Function for getting stats data for each player divided by season
+#' Function for getting stats data for each player divided by season
 #' @import magrittr
 #' @export
-
 getStats <- function(){
   players_season_stats <- data.table::fread("https://s3-ap-southeast-2.amazonaws.com/playerinfomation/Seasons_Stats.csv", data.table = FALSE)
   players_season_stats %>% 
