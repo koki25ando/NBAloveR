@@ -3,6 +3,7 @@
 export(getPlayers)
 export(getFranchise)
 export(getStats)
+export(getTeamHistory)
 export(getStatsSummary)
 export(getTeamSalary)
 importFrom(dplyr, "%>%")
