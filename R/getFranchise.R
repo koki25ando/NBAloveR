@@ -1,20 +1,13 @@
-# Function for getting Franchises' data
-# Founded year, W/L percentage, number of division/conf/league championship
+# Function for getting Franchises' data: founded year, W/L percentage, number of division/conf/league championship
+#' importFrom dplyr %>% 
 
-# Package
-library(tidyverse)
-
-## Franchise data history
-getFranchise <- function(conf){
-  FranchiseHistory <- read.csv("https://s3-ap-southeast-2.amazonaws.com/koki25ando/NBA_Franchise.csv")
-  FranchiseHistory %>% 
-    select(Franchise:Conference) %>% 
-    filter(Conference == conf)
+getFranchise <- function () {
+  url <- "https://www.basketball-reference.com/teams/"
+  page <- xml2::read_html(url)
+  tables <- page %>% 
+    rvest::html_table()
+  tables[[1]] %>% 
+    as.data.frame() %>% 
+    filter(To == 2019) %>% 
+    distinct(Franchise, .keep_all=TRUE)
 }
-
-
-
-## Example
-# west <- getFranchise(conf = "WEST")
-# west %>% 
-#   as.tibble()

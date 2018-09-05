@@ -1,11 +1,6 @@
 # function for getting given player's career summary stats
+#' importFrom dplyr %>% 
 
-# Library
-library(tidyverse)
-library(data.table)
-
-
-# Function
 getStatsSummary <- function (Name) {
   players_season_stats <- fread("https://s3-ap-southeast-2.amazonaws.com/playerinfomation/Seasons_Stats.csv", data.table = FALSE)
   players_season_stats$Player <- players_season_stats$Player %>% 
@@ -24,7 +19,3 @@ getStatsSummary <- function (Name) {
     select(Player, Career, Pos, PPG:SPG) %>% 
     filter(Player == Name)
 }
-
-## Example
-test <- getStatsSummary(Name = "Stephen Curry")
-test
