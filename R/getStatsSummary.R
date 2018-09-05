@@ -2,6 +2,7 @@
 #' @param Name palyers name
 #' 
 #' @import magrittr
+#' @export
 
 getStatsSummary <- function (Name) {
   players_season_stats <- data.table::fread("https://s3-ap-southeast-2.amazonaws.com/playerinfomation/Seasons_Stats.csv", data.table = FALSE)
