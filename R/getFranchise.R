@@ -1,9 +1,22 @@
-# Function for getting team list
+# function for getting team list
 #' Function for getting Franchises' data: founded year, W/L percentage, number of division/conf/league championship
 #' @importFrom magrittr %>%
 #' @import dplyr
+#' 
+#' @example
+#' # Import data
+#' Franchise <- getFranchise()
+#' 
+#' # Overview
+#' head(Franchise)
+#' 
+#' # A visualization example
+#' Franchise %>% 
+#'   ggplot(aes(Champ, Franchise)) +
+#'   geom_point()
+#' 
 #' @export
-
+#' 
 getFranchise <- function () {
   url <- "https://www.basketball-reference.com/teams/"
   page <- xml2::read_html(url)

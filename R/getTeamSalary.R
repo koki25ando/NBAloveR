@@ -1,6 +1,15 @@
 # Function that allows you to get salary data of each team
 #' @param team_code 3-characters team code
 #' 
+#' @export
+#' 
+#' # Extract salary dataset of Golden State Warriors' players
+#' salary <- getTeamSalary(team_code = "gsw")
+#' 
+#' # Brief overview
+#' head(salary)
+#' 
+#' @export
 
 getTeamSalary <- function (team_code) {
   url <- paste0("https://www.basketball-reference.com/contracts/", stringr::str_to_upper(team_code), ".html")
