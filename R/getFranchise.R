@@ -2,6 +2,7 @@
 #' Function for getting Franchises' data: founded year, W/L percentage, number of division/conf/league championship
 #' @importFrom magrittr %>%
 #' @import dplyr
+#' @import rvest
 #' 
 #' @example
 #' # Import data
