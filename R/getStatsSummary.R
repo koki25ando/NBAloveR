@@ -17,7 +17,7 @@ getStatsSummary <- function (Name) {
                   Career = paste0(min(Year), "-", max(Year))) %>% 
     # select(Player, PPG:SPG) %>% 
     dplyr::arrange(dplyr::desc(Player)) %>% 
-    distinct(Player, .keep_all = TRUE) %>% 
+    dplyr::distinct(Player, .keep_all = TRUE) %>% 
     dplyr::select(Player, Career, Pos, PPG:SPG) %>% 
     dplyr::filter(Player == Name)
 }
