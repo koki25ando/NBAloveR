@@ -8,7 +8,7 @@ Description: NBAloveR helps you analyze basketball data,
     the package mainly helps you get online basketball data easily.
 Depends: R (>= 3.3.2)
 License: MIT + file LICENSE
-import:
+Imports:
     dplyr,
     magrittr (>= 1.5),
     rvest (>= 0.3)
