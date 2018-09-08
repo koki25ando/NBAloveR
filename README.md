@@ -17,6 +17,7 @@ getFranchise()
 getStats()
 getStatsSummary()
 getTeamSalary()
+getTeamHistory()
 ```
 
 ## Data Source
