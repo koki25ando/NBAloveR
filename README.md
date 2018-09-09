@@ -12,12 +12,12 @@ library(NBAloveR)
 ## Package Contents
 
 ```{r}
-getPlayers()
-getFranchise()
-getStats()
-getStatsSummary()
-getTeamSalary()
-getTeamHistory()
+getPlayers(): Function for getting all NBA players' information: name, heigh/weight, college, birth year, birth place
+getFranchise(): Function for getting team list
+getStats(): Function for getting stats data for each player divided by season
+getStatsSummary(Name): Function for getting given player's career summary stats
+getTeamSalary(team_code): Function that allows you to get salary data of each team
+getTeamHistory(team_code): Function that allows you to get team history data
 ```
 
 ## Data Source
