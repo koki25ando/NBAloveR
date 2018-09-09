@@ -16,7 +16,7 @@ getPlayers(): Function for getting all NBA players' information: name, heigh/wei
 getFranchise(): Function for getting team list
 getStats(): Function for getting stats data for each player divided by season
 getStatsSummary(Name): Function for getting given player's career summary stats
-getTeamSalary(team_code): Function that allows you to get salary data of each team
+getTeamSalary(team_code): Function that allows you to get players7 salary data per each NBA team
 getTeamHistory(team_code): Function that allows you to get team history data
 ```
 
