@@ -15,7 +15,6 @@ getStatsSummary <- function (Name) {
     dplyr::group_by(Player) %>% 
     dplyr::mutate(PPG = sum(PTS)/sum(G), RPG = sum(TRB)/sum(G), APG = sum(AST)/sum(G), SPG = sum(STL)/sum(G),
                   Career = paste0(min(Year), "-", max(Year))) %>% 
-    # select(Player, PPG:SPG) %>% 
     dplyr::arrange(dplyr::desc(Player)) %>% 
     dplyr::distinct(Player, .keep_all = TRUE) %>% 
     dplyr::select(Player, Career, Pos, PPG:SPG) %>% 
