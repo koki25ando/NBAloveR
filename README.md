@@ -5,8 +5,8 @@
 ## Installation
 
 ```{r}
-install.packages("NBAloveR")
 devtools::install_github("koki25ando/NBAloveR")
+library(NBAloveR)
 ```
 
 ## Package Contents
