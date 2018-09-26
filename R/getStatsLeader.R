@@ -1,4 +1,12 @@
 # Function for getting stats leader
+#' 
+#' @import rvest
+#' @import xml2
+#' 
+#' @example 
+#' PointLeader <- getStatsLeader(stats_type = "PTS", RegularSeason = TRUE)
+#' 
+#' @export
 
 getStatsLeader <- function (stats_type = c("PTS", "AST", "STL", "BLK", "FG2", "FG3"), RegularSeason = TRUE) {
   base_url <- "https://www.basketball-reference.com/leaders/"
