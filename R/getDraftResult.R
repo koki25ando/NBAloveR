@@ -1,4 +1,14 @@
 # Function to get draft result
+#' 
+#' @import dplyr
+#' @import rvest
+#' @import xml2
+#' 
+#' @exapmle
+#' getDraftResult(year = 2009) %>% View()
+#' 
+#' @export
+
 
 getDraftResult <- function (year) {
   
@@ -12,8 +22,7 @@ getDraftResult <- function (year) {
     url <- paste0(head_url, as.character(year), tail_url)
   }
   
-  page <- read_html(url)
-  tables <- page %>% 
+  tables <- read_html(url) %>% 
     html_table()
   
   if (year >= 2009) {
@@ -56,8 +65,3 @@ getDraftResult <- function (year) {
   return(table)
  
 }
-
-
-# test
-getDraftResult(year = 2009) %>% View()
-
