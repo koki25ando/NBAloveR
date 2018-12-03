@@ -59,5 +59,5 @@ StatsCompare <- function( player_list = c(), Age=FALSE ) {
   
 }
 
-
+# Example
 StatsCompare(c("Kobe Bryant", "Allen Iverson", "Paul Pierce"), Age=TRUE)
