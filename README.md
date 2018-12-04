@@ -24,5 +24,5 @@ getTeamHistory(team_code): Function that allows you to get team history data
 Data you can get using this package are from [Basketball Reference](https://www.basketball-reference.com/).
 
 ## Hands-on Tutorial
-Visit [my blog post]("http://kokiando.hatenablog.com/entry/2018/09/10/121855") to learn how to use NBAloveR packge!
-+ [Introducing "NBAloveR"]("http://kokiando.hatenablog.com/entry/2018/09/10/121855")
+Visit [my blog post](http://kokiando.hatenablog.com/entry/2018/09/10/121855) to learn how to use NBAloveR packge!
++ [Introducing "NBAloveR"](http://kokiando.hatenablog.com/entry/2018/09/10/121855)
