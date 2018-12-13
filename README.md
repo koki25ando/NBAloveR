@@ -12,6 +12,12 @@ library(NBAloveR)
 ## Package Contents
 
 ```{r}
+getHOF():
+getDraftResult():
+seasonSchedule():
+```
+
+```{r}
 getPlayers(): Function for getting all NBA players' information: name, heigh/weight, college, birth year, birth place
 getFranchise(): Function for getting team list
 getStats(): Function for getting stats data for each player divided by season

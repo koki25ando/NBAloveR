@@ -7,16 +7,18 @@
 #' @import stringr
 #'
 #' Example
-#' StatsCompare(c("Kobe Bryant", "Allen Iverson", "Paul Pierce"), Age=TRUE)
+#' statsCompare(c("Kobe Bryant", "Allen Iverson", "Paul Pierce"), Age=TRUE)
 #'
 #' @export
+#' 
+
+player_key_list = list()
+plyaer_career = list()
+
+head_url = "https://www.basketball-reference.com/players/"
+tail_url = "01.html"
 
 statsCompare <- function( player_list = c(), Age=FALSE ) {
-  player_key_list = list()
-  plyaer_career = list()
-
-  head_url = "https://www.basketball-reference.com/players/"
-  tail_url = "01.html"
 
   for (i in 1:length(player_list)){
     player_key_list[i] <- paste0(substr(strsplit(player_list[i], " ")[[1]][2], 0,1), "/",
