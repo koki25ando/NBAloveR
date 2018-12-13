@@ -31,7 +31,7 @@ statsCompare <- function( player_list = c(), Age=FALSE ) {
       html_table()
     plyaer_career[[i]] <- plyaer_career[[i]] %>%
       filter(Age != "NA") %>%
-      mutate(Player=player_list[i])
+      plyr::mutate(Player=player_list[i])
   }
 
   point_plot_syn = list()
