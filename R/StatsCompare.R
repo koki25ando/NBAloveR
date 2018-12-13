@@ -4,6 +4,7 @@
 #' @import rvest
 #' @import xml2
 #' @import rlist
+#' @import stringr
 #'
 #' Example
 #' StatsCompare(c("Kobe Bryant", "Allen Iverson", "Paul Pierce"), Age=TRUE)

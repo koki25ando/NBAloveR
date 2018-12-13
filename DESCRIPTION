@@ -10,6 +10,7 @@ Depends: R (>= 3.3.2)
 License: MIT + file LICENSE
 Imports:
     dplyr,
+    stringr,
     magrittr (>= 1.5),
     rvest (>= 0.3),
     rlist
