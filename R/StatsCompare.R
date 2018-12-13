@@ -24,16 +24,16 @@ statsCompare <- function( player_list = c(), Age=FALSE ) {
     player_key_list[i] <- paste0(substr(strsplit(player_list[i], " ")[[1]][2], 0,1), "/",
                                  substr(strsplit(player_list[i], " ")[[1]][2], 1,5),
                                  substr(player_list[i], 1,2)) %>%
-                          str_to_lower()
+                          stringr::str_to_lower()
   }
 
   for (i in 1:length(player_key_list)){
     plyaer_career[i] <- paste0(head_url, player_key_list[[i]][1], tail_url) %>%
       xml2::read_html() %>%
       rvest::html_table()
-    plyaer_career[[i]] <- plyaer_career[[i]] %>%
-      filter(Age != "NA")
-    
+    # plyaer_career[[i]] <- plyaer_career[[i]] %>%
+    #   filter(Age != "NA") %>% suppressWarnings()
+    plyaer_career[[i]] = plyaer_career[[i]][plyaer_career[[i]]$Age != "NA", ]
   }
   
   for (i in 1:length(plyaer_career)){
@@ -47,28 +47,28 @@ statsCompare <- function( player_list = c(), Age=FALSE ) {
     for ( i in 1:length(plyaer_career)){
       point_plot_syn[[i]] <-
         ggplot2::geom_point(data = plyaer_career[[i]],
-                   aes(x=Season, y=PTS, color=Player))
+                            ggplot2::aes(x=Season, y=PTS, color=Player))
 
       line_plot_syn[[i]] <-
         ggplot2::geom_line(data = plyaer_career[[i]],
-                  aes(x=Season, y=PTS, group=Player, color=Player))
+                           ggplot2::aes(x=Season, y=PTS, group=Player, color=Player))
     }
   } else {
     for ( i in 1:length(plyaer_career)){
       point_plot_syn[[i]] <-
         ggplot2::geom_point(data = plyaer_career[[i]],
-                   aes(x=Age, y=PTS, color=Player))
+                            ggplot2::aes(x=Age, y=PTS, color=Player))
 
       line_plot_syn[[i]] <-
         ggplot2::geom_line(data = plyaer_career[[i]],
-                  aes(x=Age, y=PTS, group=Player, color=Player))
+                           ggplot2::aes(x=Age, y=PTS, group=Player, color=Player))
     }
   }
 
-  ggplot() +
+  ggplot2::ggplot() +
     point_plot_syn +
     line_plot_syn +
-    theme(axis.text.x = element_text(angle = 40)) +
-    labs(title = "Career PPG Comparison")
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 40)) +
+    ggplot2::labs(title = "Career PPG Comparison")
 
 }
