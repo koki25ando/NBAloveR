@@ -5,12 +5,12 @@
 #' @import xml2
 #' @import rlist
 #' @import stringr
+#' @import plyr
 #'
 #' Example
 #' statsCompare(c("Kobe Bryant", "Allen Iverson", "Paul Pierce"), Age=TRUE)
 #'
 #' @export
-#' 
 
 player_key_list = list()
 plyaer_career = list()
