@@ -5,6 +5,7 @@
 #' @import rlist
 #' @import stringr
 #' @import plyr
+#' @import magrittr
 #' @import ggplot2
 #' 
 #'

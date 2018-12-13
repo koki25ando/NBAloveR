@@ -15,6 +15,7 @@ library(NBAloveR)
 getHOF():
 getDraftResult():
 seasonSchedule():
+statsCompare()
 ```
 
 ```{r}
