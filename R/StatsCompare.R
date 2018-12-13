@@ -30,9 +30,16 @@ statsCompare <- function( player_list = c(), Age=FALSE ) {
     plyaer_career[i] <- paste0(head_url, player_key_list[[i]][1], tail_url) %>%
       xml2::read_html() %>%
       rvest::html_table()
+    # plyaer_career[[i]] <- plyaer_career[[i]] %>%
+    #   filter(Age != "NA") %>%
+    #   plyr::mutate(Player = player_list[[i]])
     plyaer_career[[i]] <- plyaer_career[[i]] %>%
-      filter(Age != "NA") %>%
-      plyr::mutate(Player = player_list[[i]])
+      filter(Age != "NA")
+    
+  }
+  
+  for (i in 1:length(plyaer_career)){
+    plyaer_career[[i]]$Player = player_list[i]
   }
 
   point_plot_syn = list()
