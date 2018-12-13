@@ -1,11 +1,12 @@
 # Easy stats comparison function, which also includes simple line plots
 #'
-#' @import tidyverse
 #' @import rvest
 #' @import xml2
 #' @import rlist
 #' @import stringr
 #' @import plyr
+#' @import ggplot2
+#' 
 #'
 #' Example
 #' statsCompare(c("Kobe Bryant", "Allen Iverson", "Paul Pierce"), Age=TRUE)
@@ -45,21 +46,21 @@ statsCompare <- function( player_list = c(), Age=FALSE ) {
   if (Age==FALSE) {
     for ( i in 1:length(plyaer_career)){
       point_plot_syn[[i]] <-
-        geom_point(data = plyaer_career[[i]],
+        ggplot2::geom_point(data = plyaer_career[[i]],
                    aes(x=Season, y=PTS, color=Player))
 
       line_plot_syn[[i]] <-
-        geom_line(data = plyaer_career[[i]],
+        ggplot2::geom_line(data = plyaer_career[[i]],
                   aes(x=Season, y=PTS, group=Player, color=Player))
     }
   } else {
     for ( i in 1:length(plyaer_career)){
       point_plot_syn[[i]] <-
-        geom_point(data = plyaer_career[[i]],
+        ggplot2::geom_point(data = plyaer_career[[i]],
                    aes(x=Age, y=PTS, color=Player))
 
       line_plot_syn[[i]] <-
-        geom_line(data = plyaer_career[[i]],
+        ggplot2::geom_line(data = plyaer_career[[i]],
                   aes(x=Age, y=PTS, group=Player, color=Player))
     }
   }
