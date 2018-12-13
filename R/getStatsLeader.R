@@ -1,5 +1,6 @@
 # Function for getting stats leader
 #' 
+#' @import dplyr
 #' @import rvest
 #' @import xml2
 #' 

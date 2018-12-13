@@ -3,21 +3,21 @@
 #' @importFrom magrittr %>%
 #' @import dplyr
 #' @import rvest
-#' 
+#'
 #' @example
 #' # Import data
 #' Franchise <- getFranchise()
-#' 
+#'
 #' # Overview
 #' head(Franchise)
-#' 
+#'
 #' # A visualization example
-#' Franchise %>% 
+#' Franchise %>%
 #'   ggplot(aes(Champ, Franchise)) +
 #'   geom_point()
-#' 
+#'
 #' @export
-#' 
+#'
 getFranchise <- function () {
   url <- "https://www.basketball-reference.com/teams/"
   page <- xml2::read_html(url)

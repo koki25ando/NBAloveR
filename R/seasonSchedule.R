@@ -1,6 +1,7 @@
 # Function to get result of games
 #' 
 #' @import rvest
+#' @import dplyr
 #' @import xml2
 #' 
 #' @example

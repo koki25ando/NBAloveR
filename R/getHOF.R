@@ -1,5 +1,6 @@
 # Function to get list of Hall of Famers
 #' 
+#' @import dplyr
 #' @import rvest
 #' @import xml2
 #' 
@@ -16,4 +17,3 @@ getHOF <- function(){
   data.frame(tables[[1]])[,1:4]
 }
 
-NBAhof <- getHOF()
