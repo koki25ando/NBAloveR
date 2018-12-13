@@ -12,13 +12,12 @@
 #'
 #' @export
 
-player_key_list = list()
-plyaer_career = list()
-
-head_url = "https://www.basketball-reference.com/players/"
-tail_url = "01.html"
-
 statsCompare <- function( player_list = c(), Age=FALSE ) {
+  
+  player_key_list = list()
+  plyaer_career = list()
+  head_url = "https://www.basketball-reference.com/players/"
+  tail_url = "01.html"
 
   for (i in 1:length(player_list)){
     player_key_list[i] <- paste0(substr(strsplit(player_list[i], " ")[[1]][2], 0,1), "/",
@@ -29,8 +28,8 @@ statsCompare <- function( player_list = c(), Age=FALSE ) {
 
   for (i in 1:length(player_key_list)){
     plyaer_career[i] <- paste0(head_url, player_key_list[[i]][1], tail_url) %>%
-      read_html() %>%
-      html_table()
+      xml2::read_html() %>%
+      rvest::html_table()
     plyaer_career[[i]] <- plyaer_career[[i]] %>%
       filter(Age != "NA") %>%
       plyr::mutate(Player=player_list[i])
