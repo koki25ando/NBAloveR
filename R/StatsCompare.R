@@ -32,7 +32,7 @@ statsCompare <- function( player_list = c(), Age=FALSE ) {
       rvest::html_table()
     plyaer_career[[i]] <- plyaer_career[[i]] %>%
       filter(Age != "NA") %>%
-      plyr::mutate(Player_Name = player_list[i])
+      plyr::mutate(Player = player_list[[i]])
   }
 
   point_plot_syn = list()
@@ -42,21 +42,21 @@ statsCompare <- function( player_list = c(), Age=FALSE ) {
     for ( i in 1:length(plyaer_career)){
       point_plot_syn[[i]] <-
         geom_point(data = plyaer_career[[i]],
-                   aes(x=Season, y=PTS, color=Player_Name))
+                   aes(x=Season, y=PTS, color=Player))
 
       line_plot_syn[[i]] <-
         geom_line(data = plyaer_career[[i]],
-                  aes(x=Season, y=PTS, group=Player_Name, color=Player_Name))
+                  aes(x=Season, y=PTS, group=Player, color=Player))
     }
   } else {
     for ( i in 1:length(plyaer_career)){
       point_plot_syn[[i]] <-
         geom_point(data = plyaer_career[[i]],
-                   aes(x=Age, y=PTS, color=Player_Name))
+                   aes(x=Age, y=PTS, color=Player))
 
       line_plot_syn[[i]] <-
         geom_line(data = plyaer_career[[i]],
-                  aes(x=Age, y=PTS, group=Player_Name, color=Player_Name))
+                  aes(x=Age, y=PTS, group=Player, color=Player))
     }
   }
 
