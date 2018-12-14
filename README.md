@@ -13,9 +13,10 @@ library(NBAloveR)
 
 ```{r}
 getHOF():
-getDraftResult():
-seasonSchedule():
-statsCompare()
+getDraftResult(year):
+seasonSchedule(Team, year):
+statsCompare(player_list, Age):
+getStandings(year, conf)
 ```
 
 ```{r}
