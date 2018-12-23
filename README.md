@@ -37,3 +37,4 @@ Data you can get using this package are from following websites.
 ## Hands-on Tutorial
 Visit [my blog post](http://kokiando.hatenablog.com/entry/2018/09/10/121855) to learn how to use NBAloveR packge!
 + [Introducing "NBAloveR"](http://kokiando.hatenablog.com/entry/2018/09/10/121855)
++ [NBAloveR is now updated!](http://kokiando.hatenablog.com/entry/2018/12/23/202938)
