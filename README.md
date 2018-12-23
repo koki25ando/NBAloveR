@@ -13,11 +13,11 @@ library(NBAloveR)
 
 ```{r}
 # New functions!!!
-getHOF():
-getDraftResult(year):
-seasonSchedule(Team, year):
-statsCompare(player_list, Age):
-getStandings(year, conf)
+getHOF(): Function for getting list of Hall of Famers in NBA & WNBA history
+getDraftResult(year): Function for getting draft results of each year
+seasonSchedule(Team, year): Function for getting schedules and result of each game per season
+statsCompare(player_list, Age): Function to compare selected players' PPG. Currently this is the only function which provides simple visualization.
+getStandings(year, conf): Function for getting data of standings per season
 ```
 
 ```{r}
