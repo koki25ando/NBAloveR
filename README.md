@@ -35,6 +35,7 @@ getTeamHistory(team_code): Function that allows you to get team history data
 Data you can get using this package are from following websites.
 + [Basketball Reference](https://www.basketball-reference.com/)
 + [nbadraft.net](https://www.nbadraft.net)
++ [RealGM](https://basketball.realgm.com/)
 
 ## Hands-on Tutorial
 Visit [my blog post](http://kokiando.hatenablog.com/entry/2018/09/10/121855) to learn how to use NBAloveR packge!
