@@ -2,7 +2,7 @@ Package: NBAloveR
 Title: R package that helps you analyze basketball data easily,
     mainly this package is focused on helping users get the latest
     basketball stats data.
-Version: 0.0.0.9000
+Version: 0.1.1.9000
 Authors@R: person("Koki", "Ando", email = "koki.25.ando@gmail.com", role = c("aut", "cre"))
 Description: NBAloveR helps you analyze basketball data,
     the package mainly helps you get online basketball data easily.
