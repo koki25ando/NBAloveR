@@ -18,6 +18,7 @@ seasonSchedule <- function (Team, year) {
   
   tables <- read_html(url) %>% 
     html_table()
-  data.frame(tables[[1]])
+  data.frame(tables[[1]]) %>% 
+    dplyr::filter(Date != "Date")
 }
   
