@@ -1,4 +1,4 @@
 library(readr)
 
-Player <- read_csv("data-raw/Players.csv")
+Players <- utils::read.csv("data-raw/Players.csv")
 devtools::use_data(Players, overwrite = TRUE)
