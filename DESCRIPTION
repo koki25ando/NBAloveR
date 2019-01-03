@@ -17,9 +17,6 @@ Imports:
     plyr
 Encoding: UTF-8
 LazyData: true
-Collate:
-    'data.r'
-
 RoxygenNote: 6.1.0
 Suggests: knitr,
     rmarkdown
