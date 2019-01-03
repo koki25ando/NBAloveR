@@ -20,6 +20,14 @@ getStatsPerGame <- function(Player, season){
     stringr::str_to_lower()
   url <- paste0(head_url, tail_url)
   
+  if (Player == "Ray Allen") {
+    url <- url %>%
+      stringr::str_replace("01/gamelog", "02/gamelog")
+  } else if (Player == "Joe Johnson") {
+    url <- url %>%
+      stringr::str_replace("01/gamelog", "02/gamelog")
+  }
+  
   tables <- xml2::read_html(url) %>% 
     rvest::html_table(fill = TRUE)
   data.frame(tables[[8]]) %>% 
