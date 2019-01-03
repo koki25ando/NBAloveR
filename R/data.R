@@ -4,6 +4,7 @@
 #' 
 #' @format A data fram with 21282 rows and 13 variables:
 #' \describe{
+#'   \item{X}{empty column}
 #'   \item{Player}{name of player}
 #'   \item{Pos}{position}
 #'   \item{HT}{height}
