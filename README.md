@@ -16,7 +16,7 @@ library(NBAloveR)
 ```{r}
 # New functions!!!
 getLeaders(stats_type, range): Function for getting data of each season's stats leaders.
-getStatsPerGame(Player, season): Function for getting data of given player's stats data per game.
+getStatsPerGame(Player, season, span): Function for getting data of given player's stats data per game.
 ```
 
 ```{r}
