@@ -34,8 +34,9 @@ getStatsPerGame <- function(Player, season, span=1){
     get_stats_scarping_script <- function(url) {
       tables <- xml2::read_html(url) %>%
         rvest::html_table(fill = TRUE)
-      data.frame(tables[[8]]) %>%
+      table_df <- data.frame(tables[[8]]) %>%
         dplyr::filter(Date != "Date")
+      table_df[,1:29]
     }
     
     data_list <- apply(data.frame(url_list), 1, get_stats_scarping_script)
