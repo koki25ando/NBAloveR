@@ -1,4 +1,11 @@
-# Easy stats comparison function, which also includes simple line plots
+#' Line plot for Stats comparison
+#' 
+#' Easy stats comparison function, which also includes simple line plots
+#' 
+#' @param player_list
+#' @param Age
+#' 
+#' @author Koki Ando
 #'
 #' @import rvest
 #' @import xml2
@@ -9,12 +16,14 @@
 #' @import ggplot2
 #' 
 #'
-#' Example
-#' statsCompare(c("Kobe Bryant", "Allen Iverson", "Paul Pierce"), Age=TRUE)
+#' @examples
+#' \dontrun{
+#'   statsCompare(c("Kobe Bryant", "Allen Iverson", "Paul Pierce"), Age=TRUE)
+#' }
 #'
 #' @export
 
-statsCompare <- function( player_list = c(), Age=FALSE ) {
+statsCompare <- function(player_list = c(), Age=FALSE ) {
   
   player_key_list = list()
   plyaer_career = list()

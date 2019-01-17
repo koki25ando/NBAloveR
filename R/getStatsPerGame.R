@@ -1,16 +1,57 @@
-#  Function for getting given player's stas per game
+#' Stats Per Game for a given player
+#' 
+#' Function for getting given player's stas per game
 #'
+#' @param Player The name of the player to fetch information for
+#' @param season NBA season number
+#' @param span Duration of data
+#' 
+#' @author Koki Ando
+#' 
 #' @import dplyr
 #' @import stringr
 #' @import rvest
+#' @import xml2
 #' 
-#' @example 
+#' @return This function returns \code{data.frame} including columns:
+#' \itemize{
+#'  \item G
+#'  \item Date
+#'  \item Age
+#'  \item Tm
+#'  \item Var.6
+#'  \item Opp
+#'  \item Var.8
+#'  \item GS
+#'  \item MP
+#'  \item FG
+#'  \item FGA
+#'  \item FG.
+#'  \item X3P
+#'  \item X3PA
+#'  \item X3P.
+#'  \item FT
+#'  \item FTA
+#'  \item FT.
+#'  \item ORB
+#'  \item DRB
+#'  \item TRB
+#'  \item AST
+#'  \item STL
+#'  \item BLK
+#'  \item TOV
+#'  \item PF
+#'  \item PTS
+#'  \item GmSc
+#'  \item X...
+#' }
+#' 
+#' @examples
 #' \dontrun{
 #' getStatsPerGame(Player="Kobe Bryant", season="2008")
 #' }
 #'
 #' @export
-#' 
 
 getStatsPerGame <- function(Player, season, span=1){
   

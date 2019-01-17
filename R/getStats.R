@@ -1,4 +1,4 @@
-# function for getting stats
+#' Stats
 #' Function for getting stats data for each player divided by season
 #' @importFrom magrittr %>%
 #' @import dplyr

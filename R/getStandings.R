@@ -1,13 +1,39 @@
-# function to get historical league standings
+#' Standing Data
+#' 
+#' Function to get historical league standings
+#' 
+#' @param year
+#' @param conf
+#' 
+#' @author Koki Ando
 #' 
 #' @import rvest
 #' @import xml2
 #' @import dplyr
 #' @import magrittr
+#' @import plyr
+#' @import stringr
+#' 
+#' @seealso \url{https://www.basketball-reference.com/leagues/NBA_2019_standings.html}
+#' 
+#' @return This function returns \code{data.fram} including columns:
+#' \itemize{
+#'   \item Team
+#'   \item W
+#'   \item L
+#'   \item W.L.
+#'   \item GB
+#'   \item PW
+#'   \item PL
+#'   \item PS.G
+#'   \item PA.G
+#' }
 #' 
 #' @example
-#' Standings06 <- getStandings(year = 2006, conf = "ALL")
-#' Head(Standings06)
+#' \dontrun{
+#'   Standings06 <- getStandings(year = 2006, conf = "ALL")
+#'   Head(Standings06)
+#' }
 #' 
 #' @export
 
