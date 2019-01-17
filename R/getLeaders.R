@@ -1,9 +1,27 @@
-# Function for getting data of stats leaders of each season
+#' Stats leaders of a given season
+#' 
+#' Function for getting data of stats leaders of each season
+#' 
+#' @param stats_type Stats type you want to fetch information for
+#' @param range Duration of data. Valid values are Career, Active or Single Season.
+#' 
+#' @author Koki Ando
 #'
 #' @import stringr
 #' @import dplyr
+#' @import rvest
 #' 
-#' @example
+#' @return This function returns \code{data.frame} including columns:
+#' \itemize{
+#'  \item Rank
+#'  \item Player
+#'  \item X3P
+#'  \item Season
+#' }
+#' 
+#' @seealso \url{https://www.basketball-reference.com/leaders/}
+#' 
+#' @examples
 #' \dontrun{
 #'  getLeaders(stats_type="3PM", range="Single Season")
 #' }

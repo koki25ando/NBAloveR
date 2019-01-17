@@ -7,7 +7,9 @@
 statsCompare(player_list = c(), Age = FALSE)
 }
 \arguments{
-\item{Age}{}
+\item{player_list}{List of names of players.}
+
+\item{Age}{Age valid values are TRUE or FALSE}
 }
 \description{
 Easy stats comparison function, which also includes simple line plots

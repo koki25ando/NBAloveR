@@ -2,14 +2,13 @@
 #' 
 #' Function to get result of games
 #' 
-#' @param Team
-#' @param year
+#' @param Team Team code consisting 3 characters of a team to fetch information for
+#' @param year Year number
 #' 
 #' @author Koki Ando
 #' 
 #' @import rvest
 #' @import dplyr
-#' @import xml2
 #' @import stringr
 #' 
 #' @seealso \url{https://www.basketball-reference.com/teams/}

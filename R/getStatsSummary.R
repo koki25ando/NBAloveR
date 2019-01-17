@@ -11,7 +11,6 @@
 #' @import magrittr
 #' @import dplyr
 #' @import stringr
-#' @import xml2
 #' @import rvest
 #' 
 #' @return This function returns \code{data.frame} including columns:

@@ -2,10 +2,38 @@
 % Please edit documentation in R/getFranchise.R
 \name{getFranchise}
 \alias{getFranchise}
-\title{Function for getting Franchises' data: founded year, W/L percentage, number of division/conf/league championship}
+\title{Franchise data for a given team}
 \usage{
 getFranchise()
 }
+\value{
+This function returns \code{data.frame} including columns:
+\itemize{
+ \item Franchise
+ \item Lg
+ \item From
+ \item To
+ \item Yrs
+ \item G
+ \item W
+ \item L
+ \item W/L%
+ \item Plyfs
+ \item Div
+ \item Conf
+ \item Champ
+}
+}
 \description{
 Function for getting Franchises' data: founded year, W/L percentage, number of division/conf/league championship
+}
+\examples{
+\dontrun{
+  Franchise <- getFranchise()
+  head(Franchise)
+}
+
+}
+\author{
+Koki Ando
 }

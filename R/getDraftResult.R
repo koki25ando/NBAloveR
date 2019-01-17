@@ -2,14 +2,12 @@
 #' 
 #' Function to get draft result
 #' 
-#' @param year
+#' @param year Year number
 #' 
 #' @author Koki Ando
 #'
 #' @import dplyr
 #' @import rvest
-#' @import xml2
-#' @import tidyr
 #' @import magrittr
 #' 
 #' @return This function returns \code{data.frame} including columns:
@@ -22,7 +20,7 @@
 #' 
 #' @seealso \url{http://www.nbadraft.net}
 #'
-#' @exapmles
+#' @examples
 #' \dontrun{
 #'   getDraftResult(year = 2009)
 #' }

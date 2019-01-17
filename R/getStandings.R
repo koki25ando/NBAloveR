@@ -2,13 +2,12 @@
 #' 
 #' Function to get historical league standings
 #' 
-#' @param year
-#' @param conf
+#' @param year Season number consisting 4 digits
+#' @param conf Conference to fetch information for. Valid values are East, West or All
 #' 
 #' @author Koki Ando
 #' 
 #' @import rvest
-#' @import xml2
 #' @import dplyr
 #' @import magrittr
 #' @import plyr
@@ -29,7 +28,7 @@
 #'   \item PA.G
 #' }
 #' 
-#' @example
+#' @examples
 #' \dontrun{
 #'   Standings06 <- getStandings(year = 2006, conf = "ALL")
 #'   Head(Standings06)

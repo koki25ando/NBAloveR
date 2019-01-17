@@ -23,7 +23,7 @@ Function that allows you to get salary data of each team
 }
 \examples{
 \dontrun{
- salary <- getTeamSalary(team_code = "gsw") # Extract salary dataset of Golden State Warriors' players
+ salary <- getTeamSalary(team_code = "gsw")
  head(salary)
 }
 

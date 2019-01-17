@@ -6,7 +6,6 @@
 #' 
 #' @author Koki Ando
 #' 
-#' @import xml2
 #' @import rvest
 #' @import stringr
 #' 

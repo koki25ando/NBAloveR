@@ -6,7 +6,6 @@
 #' 
 #' @author Koki Ando
 #' 
-#' @import xml2
 #' @import rvest
 #' @import stringr
 #' 
@@ -22,7 +21,7 @@
 #' 
 #' @examples
 #' \dontrun{
-#'  salary <- getTeamSalary(team_code = "gsw") # Extract salary dataset of Golden State Warriors' players
+#'  salary <- getTeamSalary(team_code = "gsw")
 #'  head(salary)
 #' }
 #'

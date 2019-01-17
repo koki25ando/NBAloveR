@@ -11,7 +11,6 @@
 #' @import dplyr
 #' @import stringr
 #' @import rvest
-#' @import xml2
 #' 
 #' @return This function returns \code{data.frame} including columns:
 #' \itemize{

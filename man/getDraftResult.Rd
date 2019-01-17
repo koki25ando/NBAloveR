@@ -7,7 +7,7 @@
 getDraftResult(year)
 }
 \arguments{
-\item{year}{}
+\item{year}{Year number}
 }
 \value{
 This function returns \code{data.frame} including columns:
@@ -20,6 +20,12 @@ This function returns \code{data.frame} including columns:
 }
 \description{
 Function to get draft result
+}
+\examples{
+\dontrun{
+  getDraftResult(year = 2009)
+}
+
 }
 \seealso{
 \url{http://www.nbadraft.net}

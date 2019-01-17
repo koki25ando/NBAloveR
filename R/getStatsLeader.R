@@ -2,14 +2,13 @@
 #' 
 #' Function for getting stats leader
 #' 
-#' @param stats_type
-#' @param RegularSeason
+#' @param stats_type Stats type to fetch information for
+#' @param RegularSeason Regular season or not. Valid values are TRUE or FALSE
 #' 
 #' @author Koki Ando
 #' 
 #' @import dplyr
 #' @import rvest
-#' @import xml2
 #' @import stringr
 #' @import magrittr
 #' 

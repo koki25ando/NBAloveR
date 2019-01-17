@@ -7,7 +7,9 @@
 getStandings(year, conf = c("East", "West", "All"))
 }
 \arguments{
-\item{conf}{}
+\item{year}{Season number consisting 4 digits}
+
+\item{conf}{Conference to fetch information for. Valid values are East, West or All}
 }
 \value{
 This function returns \code{data.fram} including columns:
@@ -25,6 +27,13 @@ This function returns \code{data.fram} including columns:
 }
 \description{
 Function to get historical league standings
+}
+\examples{
+\dontrun{
+  Standings06 <- getStandings(year = 2006, conf = "ALL")
+  Head(Standings06)
+}
+
 }
 \seealso{
 \url{https://www.basketball-reference.com/leagues/NBA_2019_standings.html}

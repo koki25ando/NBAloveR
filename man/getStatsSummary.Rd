@@ -2,16 +2,59 @@
 % Please edit documentation in R/getStatsSummary.R
 \name{getStatsSummary}
 \alias{getStatsSummary}
-\title{Function for getting given player's career summary stats}
+\title{Career summary stats for a given player}
 \usage{
 getStatsSummary(Name)
 }
 \arguments{
-\item{Name}{palyers name}
+\item{Name}{The name of the player to fetch information for}
+}
+\value{
+This function returns \code{data.frame} including columns:
+\itemize{
+ \item Season
+ \item Age
+ \item Tm
+ \item Lg
+ \item Pos
+ \item G
+ \item GS
+ \item MP
+ \item FG
+ \item FG%
+ \item 3P
+ \item 3PA
+ \item 3P%
+ \item 2P
+ \item 2PA
+ \item 2P%
+ \item eFG%
+ \item FT
+ \item FTA
+ \item FT%
+ \item ORB
+ \item DRB
+ \item TRB
+ \item AST
+ \item STL
+ \item BLK
+ \item TOV
+ \item PF
+ \item PTS
+}
 }
 \description{
 Function for getting given player's career summary stats
 }
 \examples{
+\dontrun{
+  getStatsSummary("Kobe Bryant")
+}
 
+}
+\seealso{
+\url{https://www.basketball-reference.com}
+}
+\author{
+Koki Ando
 }

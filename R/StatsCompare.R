@@ -2,18 +2,16 @@
 #' 
 #' Easy stats comparison function, which also includes simple line plots
 #' 
-#' @param player_list
-#' @param Age
+#' @param player_list List of names of players.
+#' @param Age Age valid values are TRUE or FALSE
 #' 
 #' @author Koki Ando
 #'
 #' @import rvest
-#' @import xml2
 #' @import rlist
 #' @import stringr
 #' @import plyr
 #' @import magrittr
-#' @import ggplot2
 #' 
 #'
 #' @examples

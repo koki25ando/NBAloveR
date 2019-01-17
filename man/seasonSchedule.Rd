@@ -7,7 +7,9 @@
 seasonSchedule(Team, year)
 }
 \arguments{
-\item{year}{}
+\item{Team}{Team code consisting 3 characters of a team to fetch information for}
+
+\item{year}{Year number}
 }
 \value{
 This function returns \code{data.frame} including columns:
