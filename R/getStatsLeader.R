@@ -1,11 +1,32 @@
-# Function for getting stats leader
+#' Stats Leaders
+#' 
+#' Function for getting stats leader
+#' 
+#' @param stats_type
+#' @param RegularSeason
+#' 
+#' @author Koki Ando
 #' 
 #' @import dplyr
 #' @import rvest
 #' @import xml2
+#' @import stringr
+#' @import magrittr
 #' 
-#' @example 
-#' PointLeader <- getStatsLeader(stats_type = "PTS", RegularSeason = TRUE)
+#' @seealso \url{https://www.basketball-reference.com/leaders/}
+#' 
+#' @return This function returns \code{data.frame} including columns:
+#' \itemize{
+#'  \item Rank
+#'  \item Player
+#'  \item PTS
+#'  \item Season
+#' }
+#' 
+#' @examples
+#' \dontrun{
+#'  getStatsLeader(stats_type = "PTS", RegularSeason = TRUE)
+#' }
 #' 
 #' @export
 
@@ -17,8 +38,8 @@ getStatsLeader <- function (stats_type = c("PTS", "AST", "STL", "BLK", "FG2", "F
     url <- paste0(base_url, stringr::str_to_lower(stats_type), "_season.html")
   }
   
-  tables <- read_html(as.character(url)) %>% 
-    html_table()
+  tables <- xml2::read_html(as.character(url)) %>% 
+    rvest::html_table()
   data.frame(tables[[1]])
   
 }
