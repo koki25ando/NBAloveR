@@ -8,7 +8,6 @@
 #' @author Koki Ando
 #'
 #' @import stringr
-#' @import dplyr
 #' @import rvest
 #' 
 #' @return This function returns \code{data.frame} including columns:

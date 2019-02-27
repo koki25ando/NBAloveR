@@ -8,9 +8,7 @@
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
 #' @import rvest
-#' @import dplyr
 #' @import magrittr
-#' @import plyr
 #' @import stringr
 #' 
 #' @seealso \url{https://www.basketball-reference.com/leagues/NBA_2019_standings.html}

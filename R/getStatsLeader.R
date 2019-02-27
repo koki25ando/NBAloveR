@@ -7,7 +7,6 @@
 #' 
 #' @author Koki Ando
 #' 
-#' @import dplyr
 #' @import rvest
 #' @import stringr
 #' @import magrittr

@@ -9,7 +9,6 @@
 #' @seealso \url{https://www.basketball-reference.com}
 #' 
 #' @import magrittr
-#' @import dplyr
 #' @import stringr
 #' @import rvest
 #' 

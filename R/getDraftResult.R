@@ -6,7 +6,6 @@
 #'
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #'
-#' @import dplyr
 #' @import rvest
 #' @import magrittr
 #'

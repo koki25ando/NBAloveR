@@ -8,7 +8,6 @@
 #' @author Koki Ando
 #' 
 #' @import rvest
-#' @import dplyr
 #' @import stringr
 #' @import xml2
 #' 
