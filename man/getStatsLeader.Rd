@@ -26,7 +26,8 @@ Function for getting stats leader
 }
 \examples{
 \dontrun{
- getStatsLeader(stats_type = "PTS", RegularSeason = TRUE)
+ pts_leader = getStatsLeader(stats_type = "PTS", RegularSeason = TRUE)
+ head(pts_leader)
 }
 
 }

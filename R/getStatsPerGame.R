@@ -6,7 +6,7 @@
 #' @param season NBA season number
 #' @param span Duration of data
 #' 
-#' @author Koki Ando
+#' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
 #' @import dplyr
 #' @import stringr
@@ -18,20 +18,19 @@
 #'  \item Date
 #'  \item Age
 #'  \item Tm
-#'  \item Var.6
+#'  \item Home
 #'  \item Opp
-#'  \item Var.8
 #'  \item GS
 #'  \item MP
 #'  \item FG
 #'  \item FGA
-#'  \item FG.
-#'  \item X3P
-#'  \item X3PA
-#'  \item X3P.
+#'  \item FGP
+#'  \item 3PM
+#'  \item 3PA
+#'  \item 3PP
 #'  \item FT
 #'  \item FTA
-#'  \item FT.
+#'  \item FTP
 #'  \item ORB
 #'  \item DRB
 #'  \item TRB
@@ -41,13 +40,14 @@
 #'  \item TOV
 #'  \item PF
 #'  \item PTS
-#'  \item GmSc
-#'  \item X...
+#'  \item GameScore
+#'  \item PlusMinus
 #' }
 #' 
 #' @examples
 #' \dontrun{
-#' getStatsPerGame(Player="Kobe Bryant", season="2008")
+#' kobe08 <- getStatsPerGame(Player="Kobe Bryant", season="2008")
+#' head(kobe08)
 #' }
 #'
 #' @export
@@ -93,10 +93,14 @@ getStatsPerGame <- function(Player, season, span=1){
       stringr::str_to_lower()
     url <- paste0(head_url, tail_url)
     
-    print(url)
     tables <- xml2::read_html(url) %>%
       rvest::html_table(fill = TRUE)
-    data.frame(tables[[8]]) %>%
+    table <- data.frame(tables[[8]]) %>%
       dplyr::filter(Date != "Date")
   }
+  names(table) <- c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "Var.8", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP",  "FT", 
+    "FTA", "FTP", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GameScore", "PlusMinus")
+  table %>% 
+    select(c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP",  "FT", 
+             "FTA", "FTP", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GameScore", "PlusMinus"))
 }

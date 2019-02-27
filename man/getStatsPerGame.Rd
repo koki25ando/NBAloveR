@@ -20,20 +20,19 @@ This function returns \code{data.frame} including columns:
  \item Date
  \item Age
  \item Tm
- \item Var.6
+ \item Home
  \item Opp
- \item Var.8
  \item GS
  \item MP
  \item FG
  \item FGA
- \item FG.
- \item X3P
- \item X3PA
- \item X3P.
+ \item FGP
+ \item 3PM
+ \item 3PA
+ \item 3PP
  \item FT
  \item FTA
- \item FT.
+ \item FTP
  \item ORB
  \item DRB
  \item TRB
@@ -43,8 +42,8 @@ This function returns \code{data.frame} including columns:
  \item TOV
  \item PF
  \item PTS
- \item GmSc
- \item X...
+ \item GameScore
+ \item PlusMinus
 }
 }
 \description{
@@ -52,10 +51,11 @@ Function for getting given player's stas per game
 }
 \examples{
 \dontrun{
-getStatsPerGame(Player="Kobe Bryant", season="2008")
+kobe08 <- getStatsPerGame(Player="Kobe Bryant", season="2008")
+head(kobe08)
 }
 
 }
 \author{
-Koki Ando
+Koki Ando <koki.25.ando@gmail.com>
 }

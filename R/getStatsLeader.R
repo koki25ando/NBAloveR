@@ -24,7 +24,8 @@
 #' 
 #' @examples
 #' \dontrun{
-#'  getStatsLeader(stats_type = "PTS", RegularSeason = TRUE)
+#'  pts_leader = getStatsLeader(stats_type = "PTS", RegularSeason = TRUE)
+#'  head(pts_leader)
 #' }
 #' 
 #' @export
@@ -39,6 +40,7 @@ getStatsLeader <- function (stats_type = c("PTS", "AST", "STL", "BLK", "FG2", "F
   
   tables <- xml2::read_html(as.character(url)) %>% 
     rvest::html_table()
-  data.frame(tables[[1]])
-  
+  table <- data.frame(tables[[1]])
+  table$Player <- stringr::str_remove(table$Player, "\\*")
+  table[, 2:4]
 }
