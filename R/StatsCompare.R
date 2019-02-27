@@ -6,11 +6,6 @@
 #' @param Age Age valid values are TRUE or FALSE
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
-#'
-#' @import rvest
-#' @import rlist
-#' @import stringr
-#' @import magrittr
 #' 
 #' @return This function returns a point and line plot showing transitions of PPG stats of given players.
 #'

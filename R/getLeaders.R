@@ -6,9 +6,6 @@
 #' @param range Duration of data. Valid values are Career, Active or Single Season.
 #' 
 #' @author Koki Ando
-#'
-#' @import stringr
-#' @import rvest
 #' 
 #' @return This function returns \code{data.frame} including columns:
 #' \itemize{

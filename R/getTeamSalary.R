@@ -6,9 +6,6 @@
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
-#' @import rvest
-#' @import stringr
-#' 
 #' @seealso \url{https://www.basketball-reference.com/contracts/GSW.html}
 #' 
 #' @return This function returns \code{data.frame} including columns:

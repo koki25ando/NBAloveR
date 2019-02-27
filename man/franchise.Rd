@@ -3,22 +3,22 @@
 \docType{data}
 \name{franchise}
 \alias{franchise}
-\title{Data set of NBA franchises}
+\title{franchise data set}
 \format{A data.frame with 13 columns
-\descrive{
-\item{Franchise}{Franchise name}
-\item{Lg}{League}
-\item{From}{Year the team established}
-\item{To}{To year}
-\item{Years}{Years}
-\item{G}{Games}
-\item{W}{Wins}
-\item{L}{Losses}
-\item{Per}{Win Percentage}
-\item{Playoffs}{Playoffs}
-\item{Division}{Division titles}
-\item{Conference}{Conference titles}
-\item{Champions}{Champions}
+\describe{
+ \item{Franchise}{Franchise name}
+ \item{Lg}{League}
+ \item{From}{Year the team established}
+ \item{To}{To year}
+ \item{Years}{Years}
+ \item{G}{Games}
+ \item{W}{Wins}
+ \item{L}{Losses}
+ \item{Per}{Win Percentage}
+ \item{Playoffs}{Playoffs}
+ \item{Division}{Division titles}
+ \item{Conference}{Conference titles}
+ \item{Champions}{Champions}
 }}
 \source{
 Basketball Reference

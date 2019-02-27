@@ -3,22 +3,22 @@
 \docType{data}
 \name{players}
 \alias{players}
-\title{Players data set}
+\title{players data set}
 \format{A data.frame with 13 columns
 \describe{
-\item{Player}{Name of Player}
-\item{POS}{Position of given player}
-\item{HT}{Height}
-\item{WT}{Weight}
-\item{Age}{Age}
-\item{Teams}{Team(s) the given player belongs to}
-\item{GP}{Games played}
-\item{YOS}{Year of seasons}
-\item{PreDraftTeam}{Pre-draft team}
-\item{Draft.Status}{Draft status}
-\item{Nationality}{Nationality}
-\item{Year}{Year}
-\item{RookieYear}{Rookie year}
+ \item{Player}{Name of Player}
+ \item{POS}{Position of given player}
+ \item{HT}{Height}
+ \item{WT}{Weight}
+ \item{Age}{Age}
+ \item{Teams}{Team(s) the given player belongs to}
+ \item{GP}{Games played}
+ \item{YOS}{Year of seasons}
+ \item{PreDraftTeam}{Pre-draft team}
+ \item{Draft.Status}{Draft status}
+ \item{Nationality}{Nationality}
+ \item{Year}{Year}
+ \item{RookieYear}{Rookie year}
 }}
 \source{
 Basketball Real GM

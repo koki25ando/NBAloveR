@@ -8,10 +8,6 @@
 #' 
 #' @seealso \url{https://www.basketball-reference.com}
 #' 
-#' @import magrittr
-#' @import stringr
-#' @import rvest
-#' 
 #' @return This function returns \code{data.frame} including columns:
 #' \itemize{
 #'  \item Season

@@ -6,9 +6,6 @@
 #' 
 #' @author Koki Ando
 #' 
-#' @import rvest
-#' @import stringr
-#' 
 #' @seealso \url{https://www.basketball-reference.com/teams/BOS/}
 #' 
 #' @return This function returns \code{data.frame} including columns:

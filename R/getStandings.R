@@ -7,10 +7,6 @@
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
-#' @import rvest
-#' @import magrittr
-#' @import stringr
-#' 
 #' @seealso \url{https://www.basketball-reference.com/leagues/NBA_2019_standings.html}
 #' 
 #' @return This function returns \code{data.fram} including columns:

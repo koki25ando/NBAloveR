@@ -8,9 +8,6 @@
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
-#' @import stringr
-#' @import rvest
-#' 
 #' @return This function returns \code{data.frame} including columns:
 #' \itemize{
 #'  \item G
