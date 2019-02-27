@@ -4,7 +4,8 @@
 \name{players}
 \alias{players}
 \title{Players data set}
-\format{\describe{
+\format{A data.frame with 13 columns
+\describe{
 \item{Player}{Name of Player}
 \item{POS}{Position of given player}
 \item{HT}{Height}

@@ -4,7 +4,7 @@
 #'
 #' @param year Year number
 #'
-#' @author Koki Ando
+#' @author Koki Ando <koki.25.ando@gmail.com>
 #'
 #' @import dplyr
 #' @import rvest
@@ -22,7 +22,8 @@
 #'
 #' @examples
 #' \dontrun{
-#'   getDraftResult(year = 2009)
+#'   draft09 <- getDraftResult(year = 2009)
+#'   head(draft09)
 #' }
 #'
 #' @export
@@ -79,7 +80,8 @@ getDraftResult <- function (year) {
     table <- dplyr::bind_rows(table_1, table_2)
     names(table) <- c("Team", "Player", "College")
   }
-
+  
+  table$Team <- stringr::str_remove(table$Team, "\\*")
   return(table)
 
 }

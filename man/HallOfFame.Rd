@@ -4,7 +4,8 @@
 \name{HallOfFame}
 \alias{HallOfFame}
 \title{Data set of players in the Naismith Memorial Basketball Hall of Fame}
-\format{\describe{
+\format{A data.frame with 4 columns
+\describe{
 \item{Year}{Year}
 \item{Inductee}{Name of inductee}
 \item{Pos}{Position}

@@ -17,12 +17,12 @@ This function returns \code{data.fram} including columns:
   \item Team
   \item W
   \item L
-  \item W.L.
+  \item Per
   \item GB
   \item PW
   \item PL
-  \item PS.G
-  \item PA.G
+  \item PSG
+  \item PAG
 }
 }
 \description{
@@ -31,7 +31,7 @@ Function to get historical league standings
 \examples{
 \dontrun{
   Standings06 <- getStandings(year = 2006, conf = "ALL")
-  Head(Standings06)
+  head(Standings06)
 }
 
 }
@@ -39,5 +39,5 @@ Function to get historical league standings
 \url{https://www.basketball-reference.com/leagues/NBA_2019_standings.html}
 }
 \author{
-Koki Ando
+Koki Ando <koki.25.ando@gmail.com>
 }

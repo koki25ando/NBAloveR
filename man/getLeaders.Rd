@@ -27,7 +27,8 @@ Function for getting data of stats leaders of each season
 }
 \examples{
 \dontrun{
- getLeaders(stats_type="3PM", range="Single Season")
+ leaders_3pm <- getLeaders(stats_type="3PM", range="Single Season")
+ head(leaders_3pm)
 }
 
 }

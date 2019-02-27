@@ -23,7 +23,8 @@ Function to get draft result
 }
 \examples{
 \dontrun{
-  getDraftResult(year = 2009)
+  draft09 <- getDraftResult(year = 2009)
+  head(draft09)
 }
 
 }
@@ -31,5 +32,5 @@ Function to get draft result
 \url{http://www.nbadraft.net}
 }
 \author{
-Koki Ando
+Koki Ando <koki.25.ando@gmail.com>
 }

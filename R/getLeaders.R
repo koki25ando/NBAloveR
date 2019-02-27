@@ -23,7 +23,8 @@
 #' 
 #' @examples
 #' \dontrun{
-#'  getLeaders(stats_type="3PM", range="Single Season")
+#'  leaders_3pm <- getLeaders(stats_type="3PM", range="Single Season")
+#'  head(leaders_3pm)
 #' }
 #' 
 #' @export
@@ -52,6 +53,7 @@ getLeaders <- function(stats_type = c("3PM", "2PM", "3PA", "2PA", "PTS", "AST", 
   url = paste0(head_url, type_key, "_", range_key, tail_url)
   tables <- xml2::read_html(url) %>% 
     rvest::html_table()
-  data.frame(tables[[1]])
-  
+  table <- data.frame(tables[[1]])
+  table$Player <- stringr::str_remove(table$Player, "\\*")
+  table[, 2:4]
 }

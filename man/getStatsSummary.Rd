@@ -56,5 +56,5 @@ Function for getting given player's career summary stats
 \url{https://www.basketball-reference.com}
 }
 \author{
-Koki Ando
+Koki Ando <koki.25.ando@gmail.com>
 }

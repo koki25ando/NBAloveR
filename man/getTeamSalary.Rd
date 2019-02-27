@@ -23,8 +23,8 @@ Function that allows you to get salary data of each team
 }
 \examples{
 \dontrun{
- salary <- getTeamSalary(team_code = "gsw")
- head(salary)
+ salary_gsw <- getTeamSalary(team_code = "gsw")
+ head(salary_gsw)
 }
 
 }
@@ -32,5 +32,5 @@ Function that allows you to get salary data of each team
 \url{https://www.basketball-reference.com/contracts/GSW.html}
 }
 \author{
-Koki Ando
+Koki Ando <koki.25.ando@gmail.com>
 }
