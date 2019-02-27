@@ -1,5 +1,8 @@
-# NBAloveR 0.1.3.0
-Documentations uploaded. Some functions are deleted due to overlapping features.
+#NBAloveR 0.1.3.1
+Data added to the package. Reported bugs were fixed.(02/27/2019)
+
+## NBAloveR 0.1.3.0
+Documentations uploaded. Some functions are deleted due to overlapping features.(01/15/2019)
 
 ## NBAloveR 0.1.2.0
 Minor updates. Two new functions added. Bugs reported from the previous version were fixed. (01/03/2019)
