@@ -29,6 +29,6 @@ getHOF <- function(){
   url <- "https://en.wikipedia.org/wiki/List_of_players_in_the_Naismith_Memorial_Basketball_Hall_of_Fame"
   tables <- xml2::read_html(url) %>% 
     rvest::html_table(fill = TRUE)
-  data.frame(tables[[1]])[,1:4]
+  hof <- data.frame(tables[[1]])[,1:4]
 }
 
