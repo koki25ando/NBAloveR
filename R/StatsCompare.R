@@ -1,22 +1,22 @@
-#' Line plot for Stats comparison
+#' Visualization of Stats comparison
 #' 
-#' Easy stats comparison function, which also includes simple line plots
+#' Easy stats comparison function, which also includes simple line and point plots
 #' 
 #' @param player_list List of names of players.
 #' @param Age Age valid values are TRUE or FALSE
 #' 
-#' @author Koki Ando
+#' @author Koki Ando <koki.25.ando@gmail.com>
 #'
 #' @import rvest
 #' @import rlist
 #' @import stringr
-#' @import plyr
 #' @import magrittr
 #' 
+#' @return This function returns a point and line plot showing transitions of PPG stats of given players.
 #'
 #' @examples
 #' \dontrun{
-#'   statsCompare(c("Kobe Bryant", "Allen Iverson", "Paul Pierce"), Age=TRUE)
+#'   statsCompare(c("Kevin Durant", "Russel Westbrook", "James Harden"), Age=FALSE)
 #' }
 #'
 #' @export
@@ -39,8 +39,6 @@ statsCompare <- function(player_list = c(), Age=FALSE ) {
     plyaer_career[i] <- paste0(head_url, player_key_list[[i]][1], tail_url) %>%
       xml2::read_html() %>%
       rvest::html_table()
-    # plyaer_career[[i]] <- plyaer_career[[i]] %>%
-    #   filter(Age != "NA") %>% suppressWarnings()
     plyaer_career[[i]] = plyaer_career[[i]][plyaer_career[[i]]$Age != "NA", ]
   }
   

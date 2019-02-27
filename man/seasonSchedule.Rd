@@ -16,11 +16,10 @@ This function returns \code{data.frame} including columns:
 \itemize{
  \item G
  \item Date
- \item Start..ET.
- \item Var.6
+ \item StartTime
  \item Opponent
- \item Var.8
- \item Var.9
+ \item Result
+ \item OT
  \item Tm
  \item Opp
  \item W

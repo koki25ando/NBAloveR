@@ -2,7 +2,7 @@
 % Please edit documentation in R/statsCompare.R
 \name{statsCompare}
 \alias{statsCompare}
-\title{Line plot for Stats comparison}
+\title{Visualization of Stats comparison}
 \usage{
 statsCompare(player_list = c(), Age = FALSE)
 }
@@ -11,15 +11,18 @@ statsCompare(player_list = c(), Age = FALSE)
 
 \item{Age}{Age valid values are TRUE or FALSE}
 }
+\value{
+This function returns a point and line plot showing transitions of PPG stats of given players.
+}
 \description{
-Easy stats comparison function, which also includes simple line plots
+Easy stats comparison function, which also includes simple line and point plots
 }
 \examples{
 \dontrun{
-  statsCompare(c("Kobe Bryant", "Allen Iverson", "Paul Pierce"), Age=TRUE)
+  statsCompare(c("Kevin Durant", "Russel Westbrook", "James Harden"), Age=FALSE)
 }
 
 }
 \author{
-Koki Ando
+Koki Ando <koki.25.ando@gmail.com>
 }

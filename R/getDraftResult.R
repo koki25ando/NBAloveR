@@ -1,15 +1,15 @@
 #' Draft Result of a given year
-#' 
+#'
 #' Function to get draft result
-#' 
+#'
 #' @param year Year number
-#' 
+#'
 #' @author Koki Ando
 #'
 #' @import dplyr
 #' @import rvest
 #' @import magrittr
-#' 
+#'
 #' @return This function returns \code{data.frame} including columns:
 #' \itemize{
 #'  \item #

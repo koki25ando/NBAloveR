@@ -10,6 +10,7 @@
 #' @import rvest
 #' @import dplyr
 #' @import stringr
+#' @import xml2
 #' 
 #' @seealso \url{https://www.basketball-reference.com/teams/}
 #' 
@@ -17,11 +18,10 @@
 #' \itemize{
 #'  \item G
 #'  \item Date
-#'  \item Start..ET.
-#'  \item Var.6
+#'  \item StartTime
 #'  \item Opponent
-#'  \item Var.8
-#'  \item Var.9
+#'  \item Result
+#'  \item OT
 #'  \item Tm
 #'  \item Opp
 #'  \item W
@@ -42,9 +42,11 @@ seasonSchedule <- function (Team, year) {
   base_url <- "https://www.basketball-reference.com/teams/"
   url <- paste0(base_url, stringr::str_to_upper(Team), "/", year, "_games.html")
   
-  tables <- xml::read_html(url) %>% 
+  tables <- xml2::read_html(url) %>% 
     rvest::html_table()
-  data.frame(tables[[1]]) %>% 
+  df <- data.frame(tables[[1]]) %>% 
     dplyr::filter(Date != "Date")
+  names(df)  <- c("G", "Date", "StartTime", "Var.4", "Var.5", "Var.6", "Opponent", "Result", "OT", "Tm", "Opp", "W", "L", "Streak", "Notes")
+  df %>% 
+    select(G, Date, StartTime, Opponent, Result, OT, Tm, Opp, W, L, Streak) 
 }
-  
