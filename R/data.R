@@ -2,7 +2,7 @@
 #'
 #' Data set of all NBA players
 #'
-#' @format
+#' @format A data.frame with 13 columns
 #' \describe{
 #' \item{Player}{Name of Player}
 #' \item{POS}{Position of given player}
@@ -24,7 +24,7 @@
 
 #' Data set of players in the Naismith Memorial Basketball Hall of Fame
 #'
-#' @format
+#' @format A data.frame with 4 columns
 #' \describe{
 #' \item{Year}{Year}
 #' \item{Inductee}{Name of inductee}
@@ -34,3 +34,25 @@
 #' @source wikipedia
 #' 
 "HallOfFame"
+
+#' Data set of NBA franchises
+#' 
+#' @format A data.frame with 13 columns
+#' \descrive{
+#' \item{Franchise}{Franchise name}
+#' \item{Lg}{League}
+#' \item{From}{Year the team established}
+#' \item{To}{To year}
+#' \item{Years}{Years}
+#' \item{G}{Games}
+#' \item{W}{Wins}
+#' \item{L}{Losses}
+#' \item{Per}{Win Percentage}
+#' \item{Playoffs}{Playoffs}
+#' \item{Division}{Division titles}
+#' \item{Conference}{Conference titles}
+#' \item{Champions}{Champions}
+#' }
+#' @source Basketball Reference
+#'
+"franchise"

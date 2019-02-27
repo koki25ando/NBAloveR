@@ -4,7 +4,7 @@
 #' 
 #' @param Name The name of the player to fetch information for
 #' 
-#' @author Koki Ando
+#' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
 #' @seealso \url{https://www.basketball-reference.com}
 #' 

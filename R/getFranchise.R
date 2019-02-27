@@ -43,3 +43,5 @@ getFranchise <- function () {
   table <- dplyr::distinct(table, Franchise, .keep_all=TRUE)
   table
 }
+
+names(Franchise) <- c("Franchise", "Lg", "From", "To", "Years", "G", "W", "L", "Per", "Playoffs", "Division", "Conference", "Champions")

@@ -5,7 +5,7 @@
 #' @param year Season number consisting 4 digits
 #' @param conf Conference to fetch information for. Valid values are East, West or All
 #' 
-#' @author Koki Ando
+#' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
 #' @import rvest
 #' @import dplyr
@@ -20,18 +20,18 @@
 #'   \item Team
 #'   \item W
 #'   \item L
-#'   \item W.L.
+#'   \item Per
 #'   \item GB
 #'   \item PW
 #'   \item PL
-#'   \item PS.G
-#'   \item PA.G
+#'   \item PSG
+#'   \item PAG
 #' }
 #' 
 #' @examples
 #' \dontrun{
 #'   Standings06 <- getStandings(year = 2006, conf = "ALL")
-#'   Head(Standings06)
+#'   head(Standings06)
 #' }
 #' 
 #' @export
@@ -61,6 +61,7 @@ getStandings <- function (year, conf = c("East", "West", "All")) {
       plyr::arrange(plyr::desc(W)) %>% 
       na.omit()
   }
-  
+  table$Team = stringr::str_remove(table$Team, "\\*")
+  names(table) <- c("Team", "W", "L", "Per", "GB", "PW", "PL", "PSG", "PAG")
   data.frame(table)
 }

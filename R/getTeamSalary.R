@@ -4,7 +4,7 @@
 #'
 #' @param team_code Team code consisting of 3 characters to fetch information for
 #' 
-#' @author Koki Ando
+#' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
 #' @import rvest
 #' @import stringr
@@ -21,8 +21,8 @@
 #' 
 #' @examples
 #' \dontrun{
-#'  salary <- getTeamSalary(team_code = "gsw")
-#'  head(salary)
+#'  salary_gsw <- getTeamSalary(team_code = "gsw")
+#'  head(salary_gsw)
 #' }
 #'
 #' @export
