@@ -6,11 +6,8 @@
 #'
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #'
-<<<<<<< HEAD
 #' @importFrom magrittr %>%
 #' 
-=======
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 #' @return This function returns \code{data.frame} including columns:
 #' \itemize{
 #'  \item #
@@ -23,11 +20,8 @@
 #'
 #' @examples
 #' \dontrun{
-<<<<<<< HEAD
 #'   draft09 <- getDraftResult(year = 2018)
-=======
 #'   draft09 <- getDraftResult(year = 2009)
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 #'   head(draft09)
 #' }
 #'
@@ -67,22 +61,16 @@ getDraftResult <- function (year) {
     table_1 <- tables[[1]]
     names(table_1) <- c("Team", "Player")
     table_1 <- table_1[-1,]
-<<<<<<< HEAD
     table_1 <- tidyr::separate(table_1, Team, sep = "\n", into = c("No.", "Team"))
-=======
     table_1 <- table_1 %>%
       tidyr::separate(Team, sep = "\n", into = c("No.", "Team"))
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 
     table_2 <- tables[[2]][-1,]
     names(table_2) <- c("Team", "Player", "College")
     table_2 <- table_2 %>%
-<<<<<<< HEAD
       tidyr::separate(Team, sep = "\n", into = c("No.", "Team"))
     table_2 <- table_2 %>%
-=======
       tidyr::separate(Team, sep = "\n", into = c("No.", "Team")) %>%
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
       tidyr::unite(Player, College, sep = " ", col = "Player")
 
     table <- dplyr::bind_rows(table_1, table_2)
@@ -96,10 +84,7 @@ getDraftResult <- function (year) {
   }
   
   table$Team <- stringr::str_remove(table$Team, "\\*")
-<<<<<<< HEAD
   table
-=======
   return(table)
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 
 }
