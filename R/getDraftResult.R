@@ -6,6 +6,8 @@
 #'
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #'
+#' @importFrom magrittr %>%
+#' 
 #' @return This function returns \code{data.frame} including columns:
 #' \itemize{
 #'  \item #
@@ -18,7 +20,7 @@
 #'
 #' @examples
 #' \dontrun{
-#'   draft09 <- getDraftResult(year = 2009)
+#'   draft09 <- getDraftResult(year = 2018)
 #'   head(draft09)
 #' }
 #'
@@ -58,13 +60,13 @@ getDraftResult <- function (year) {
     table_1 <- tables[[1]]
     names(table_1) <- c("Team", "Player")
     table_1 <- table_1[-1,]
-    table_1 <- table_1 %>%
-      tidyr::separate(Team, sep = "\n", into = c("No.", "Team"))
+    table_1 <- tidyr::separate(table_1, Team, sep = "\n", into = c("No.", "Team"))
 
     table_2 <- tables[[2]][-1,]
     names(table_2) <- c("Team", "Player", "College")
     table_2 <- table_2 %>%
-      tidyr::separate(Team, sep = "\n", into = c("No.", "Team")) %>%
+      tidyr::separate(Team, sep = "\n", into = c("No.", "Team"))
+    table_2 <- table_2 %>%
       tidyr::unite(Player, College, sep = " ", col = "Player")
 
     table <- dplyr::bind_rows(table_1, table_2)
@@ -78,6 +80,6 @@ getDraftResult <- function (year) {
   }
   
   table$Team <- stringr::str_remove(table$Team, "\\*")
-  return(table)
+  table
 
 }

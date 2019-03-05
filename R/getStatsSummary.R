@@ -6,6 +6,8 @@
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
+#' @importFrom magrittr %>%
+#' 
 #' @seealso \url{https://www.basketball-reference.com}
 #' 
 #' @return This function returns \code{data.frame} including columns:
@@ -43,7 +45,7 @@
 #' 
 #' @examples
 #' \dontrun{
-#'   getStatsSummary("Kobe Bryant")
+#'   getStatsSummary(Name = "Kobe Bryant")
 #' }
 #' 
 #' @export
@@ -60,5 +62,5 @@ getStatsSummary <- function (Name) {
     xml2::read_html() %>%
     rvest::html_table()
   tables[[1]] %>% 
-    dplyr::filter(Season=="Career")
+    dplyr::filter(tables[[1]]$Season=="Career")
 }

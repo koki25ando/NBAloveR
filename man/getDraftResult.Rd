@@ -23,7 +23,8 @@ Function to get draft result
 }
 \examples{
 \dontrun{
-  draft09 <- getDraftResult(year = 2009)
+  draft09 <- getDraftResult(year = 1999)
+  draft09 <- getDraftResult(year = 2006)
   head(draft09)
 }
 

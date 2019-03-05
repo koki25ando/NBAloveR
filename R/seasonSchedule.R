@@ -7,6 +7,8 @@
 #' 
 #' @author Koki Ando
 #' 
+#' @importFrom magrittr %>%
+#' 
 #' @seealso \url{https://www.basketball-reference.com/teams/}
 #' 
 #' @return This function returns \code{data.frame} including columns:
@@ -40,7 +42,7 @@ seasonSchedule <- function (Team, year) {
   tables <- xml2::read_html(url) %>% 
     rvest::html_table()
   df <- data.frame(tables[[1]]) %>% 
-    dplyr::filter(Date != "Date")
+    dplyr::filter(data.frame(tables[[1]])$Date != "Date")
   names(df)  <- c("G", "Date", "StartTime", "Var.4", "Var.5", "Var.6", "Opponent", "Result", "OT", "Tm", "Opp", "W", "L", "Streak", "Notes")
   df[, c(1:3, 7:14)]
 }

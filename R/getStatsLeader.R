@@ -7,6 +7,8 @@
 #' 
 #' @author Koki Ando
 #' 
+#' @importFrom magrittr %>%
+#' 
 #' @seealso \url{https://www.basketball-reference.com/leaders/}
 #' 
 #' @return This function returns \code{data.frame} including columns:

@@ -48,7 +48,7 @@ Function for getting given player's career summary stats
 }
 \examples{
 \dontrun{
-  getStatsSummary("Kobe Bryant")
+  getStatsSummary(Name = "Kobe Bryant")
 }
 
 }
