@@ -1,6 +1,7 @@
 #' Draft Result of a given year
 #'
 #' Function to get draft result
+#' This function is about to be deleted
 #'
 #' @param year Year number
 #'
