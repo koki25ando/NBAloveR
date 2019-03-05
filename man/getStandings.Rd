@@ -30,7 +30,7 @@ Function to get historical league standings
 }
 \examples{
 \dontrun{
-  Standings06 <- getStandings(year = 2006, conf = "ALL")
+  Standings06 <- getStandings(year = 2006, conf = "All")
   head(Standings06)
 }
 
