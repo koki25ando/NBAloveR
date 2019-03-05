@@ -8,8 +8,6 @@ getStatsSummary(Name)
 }
 \arguments{
 \item{Name}{The name of the player to fetch information for}
-
-\item{Name}{The name of the player to fetch information for}
 }
 \value{
 This function returns \code{data.frame} including columns:
@@ -50,7 +48,8 @@ Function for getting given player's career summary stats
 }
 \examples{
 \dontrun{
-  getStatsSummary("Kobe Bryant")
+ kobe_summary  = getStatsSummary(Name = "Kobe Bryant")
+ head(kobe_summary)
 }
 
 }

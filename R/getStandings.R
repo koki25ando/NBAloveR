@@ -62,6 +62,6 @@ getStandings <- function (year, conf = c("East", "West", "All")) {
   }
   table$Team = stringr::str_remove(table$Team, "\\*")
   names(table) <- c("Team", "W", "L", "Per", "GB", "PW", "PL", "PSG", "PAG")
-  table = mutate(table, GB = ((max(W)-min(L))-(W-L))/2)
+  table = dplyr::mutate(table, GB = ((max(table$W)-min(table$L))-(table$W-table$L))/2)
   data.frame(table)
 }

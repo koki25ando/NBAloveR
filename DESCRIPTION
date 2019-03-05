@@ -9,12 +9,16 @@ Encoding: UTF-8
 LazyData: true
 Suggests:
     knitr,
-    rmarkdown
+    rmarkdown,
+    ggplot2,
+    plyr,
+    rvest,
+    stringr,
+    xml2
 VignetteBuilder: knitr
 RoxygenNote: 6.1.1
 Imports:
     magrittr,
     dplyr,
     stats,
-    tidyr,
-    stats
+    tidyr

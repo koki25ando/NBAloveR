@@ -8,9 +8,6 @@
 #' 
 #' @importFrom magrittr %>%
 #' 
-#' 
-#' @param Name The name of the player to fetch information for
-#' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
 #' @seealso \url{https://www.basketball-reference.com}
@@ -50,7 +47,8 @@
 #' 
 #' @examples
 #' \dontrun{
-#'   getStatsSummary("Kobe Bryant")
+#'  kobe_summary  = getStatsSummary(Name = "Kobe Bryant")
+#'  head(kobe_summary)
 #' }
 #' 
 #' @export
@@ -67,6 +65,5 @@ getStatsSummary <- function (Name) {
     xml2::read_html() %>%
     rvest::html_table()
   tables[[1]] %>% 
-    dplyr::filter(tables[[1]]$Season=="Career") %>% 
-    dplyr::filter(Season=="Career")
+    dplyr::filter(tables[[1]]$Season=="Career")
 }
