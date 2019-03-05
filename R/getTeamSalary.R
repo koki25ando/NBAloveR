@@ -18,7 +18,7 @@
 #' 
 #' @examples
 #' \dontrun{
-#'  salary_gsw <- getTeamSalary(team_code = "gsw")
+#'  salary_gsw <- getTeamSalary(team_code = "phi")
 #'  head(salary_gsw)
 #' }
 #'
