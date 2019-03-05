@@ -55,11 +55,6 @@ statsCompare <- function(player_list = c(), Age=FALSE ) {
       line_plot_syn[[i]] <-
         ggplot2::geom_line(data = plyaer_career[[i]],
                            ggplot2::aes_string(x="Season", y="PTS", group="Player", color="Player"))
-                            ggplot2::aes(x=Season, y=PTS, color=Player))
-
-      line_plot_syn[[i]] <-
-        ggplot2::geom_line(data = plyaer_career[[i]],
-                           ggplot2::aes(x=Season, y=PTS, group=Player, color=Player))
     }
   } else {
     for ( i in 1:length(plyaer_career)){
@@ -70,11 +65,6 @@ statsCompare <- function(player_list = c(), Age=FALSE ) {
       line_plot_syn[[i]] <-
         ggplot2::geom_line(data = plyaer_career[[i]],
                            ggplot2::aes_string(x="Age", y="PTS", group="Player", color="Player"))
-                            ggplot2::aes(x=Age, y=PTS, color=Player))
-
-      line_plot_syn[[i]] <-
-        ggplot2::geom_line(data = plyaer_career[[i]],
-                           ggplot2::aes(x=Age, y=PTS, group=Player, color=Player))
     }
   }
 

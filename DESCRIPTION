@@ -18,5 +18,3 @@ Imports:
     stats,
     tidyr,
     stats
-VignetteBuilder: knitr
-RoxygenNote: 6.1.1

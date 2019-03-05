@@ -74,7 +74,6 @@ getStatsPerGame <- function(Player, season, span=1){
         rvest::html_table(fill = TRUE)
       table_df <- data.frame(tables[[8]]) %>%
         dplyr::filter(data.frame(tables[[8]])$Date != "Date")
-        dplyr::filter(Date != "Date")
       table_df[,1:29]
     }
     
@@ -96,12 +95,10 @@ getStatsPerGame <- function(Player, season, span=1){
       rvest::html_table(fill = TRUE)
     table <- data.frame(tables[[8]]) %>%
       dplyr::filter(data.frame(tables[[8]]) $Date != "Date")
-      dplyr::filter(Date != "Date")
   }
   names(table) <- c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "Var.8", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP",  "FT", 
     "FTA", "FTP", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GameScore", "PlusMinus")
   table %>% 
     dplyr::select(c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP",  "FT", 
-    select(c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP",  "FT", 
              "FTA", "FTP", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GameScore", "PlusMinus"))
 }
