@@ -7,11 +7,11 @@
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
-<<<<<<< HEAD
+
 #' @importFrom magrittr %>%
 #' 
-=======
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
+
+
 #' @seealso \url{https://www.basketball-reference.com/leagues/NBA_2019_standings.html}
 #' 
 #' @return This function returns \code{data.fram} including columns:
@@ -46,34 +46,34 @@ getStandings <- function (year, conf = c("East", "West", "All")) {
   conference <- stringr::str_to_lower(conf)
   if (conference == "east") {
     table <- tables[[1]] %>% 
-<<<<<<< HEAD
+
       plyr::arrange(plyr::desc(tables[[1]]$W)) %>% 
       stats::na.omit()
   } else if (conference == "west") {
     table <- tables[[2]] %>% 
       plyr::arrange(plyr::desc(tables[[2]]$W)) %>% 
       stats::na.omit()
-=======
+
       plyr::arrange(plyr::desc(W)) %>% 
       na.omit()
   } else if (conference == "west") {
     table <- tables[[2]] %>% 
       plyr::arrange(plyr::desc(W)) %>% 
       na.omit()
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
+
   } else {
     names(tables[[1]])[1] <- "Team"
     names(tables[[2]])[1] <- "Team"
     
-<<<<<<< HEAD
+
     table <- dplyr::bind_rows(tables[[1]], tables[[2]]) %>% 
       plyr::arrange(plyr::desc(dplyr::bind_rows(tables[[1]], tables[[2]])$W)) %>% 
       stats::na.omit()
-=======
+
     table <- dplyr::bind_rows(tables[[1]], tables[[2]])%>% 
       plyr::arrange(plyr::desc(W)) %>% 
       na.omit()
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
+
   }
   table$Team = stringr::str_remove(table$Team, "\\*")
   names(table) <- c("Team", "W", "L", "Per", "GB", "PW", "PL", "PSG", "PAG")

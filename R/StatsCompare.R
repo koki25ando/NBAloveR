@@ -7,11 +7,8 @@
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
-<<<<<<< HEAD
 #' @importFrom magrittr %>%
 #' 
-=======
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 #' @return This function returns a point and line plot showing transitions of PPG stats of given players.
 #'
 #' @examples
@@ -53,37 +50,31 @@ statsCompare <- function(player_list = c(), Age=FALSE ) {
     for ( i in 1:length(plyaer_career)){
       point_plot_syn[[i]] <-
         ggplot2::geom_point(data = plyaer_career[[i]],
-<<<<<<< HEAD
                             ggplot2::aes_string(x="Season", y="PTS", color="Player"))
 
       line_plot_syn[[i]] <-
         ggplot2::geom_line(data = plyaer_career[[i]],
                            ggplot2::aes_string(x="Season", y="PTS", group="Player", color="Player"))
-=======
                             ggplot2::aes(x=Season, y=PTS, color=Player))
 
       line_plot_syn[[i]] <-
         ggplot2::geom_line(data = plyaer_career[[i]],
                            ggplot2::aes(x=Season, y=PTS, group=Player, color=Player))
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
     }
   } else {
     for ( i in 1:length(plyaer_career)){
       point_plot_syn[[i]] <-
         ggplot2::geom_point(data = plyaer_career[[i]],
-<<<<<<< HEAD
                             ggplot2::aes_string(x="Age", y="PTS", color="Player"))
 
       line_plot_syn[[i]] <-
         ggplot2::geom_line(data = plyaer_career[[i]],
                            ggplot2::aes_string(x="Age", y="PTS", group="Player", color="Player"))
-=======
                             ggplot2::aes(x=Age, y=PTS, color=Player))
 
       line_plot_syn[[i]] <-
         ggplot2::geom_line(data = plyaer_career[[i]],
                            ggplot2::aes(x=Age, y=PTS, group=Player, color=Player))
->>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
     }
   }
 
