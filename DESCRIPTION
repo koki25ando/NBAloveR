@@ -3,7 +3,11 @@ Title: Help Basketball data analysis
 Version: 0.0.0.9000
 Authors@R: person("Koki", "Andp", email = "koki.25.ando@gmail.com", role = c("aut", "cre"))
 Description: Provides support for users to analyze basketball.
+<<<<<<< HEAD
 Depends: R (>= 3.1)
+=======
+Depends: R (>= 3.5.2)
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 License: GPL-2 | file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -15,5 +19,9 @@ RoxygenNote: 6.1.1
 Imports:
     magrittr,
     dplyr,
+<<<<<<< HEAD
     stats,
     tidyr
+=======
+    stats
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994

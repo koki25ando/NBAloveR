@@ -8,8 +8,11 @@
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
+<<<<<<< HEAD
 #' @importFrom magrittr %>%
 #' 
+=======
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 #' @return This function returns \code{data.frame} including columns:
 #' \itemize{
 #'  \item G
@@ -73,7 +76,11 @@ getStatsPerGame <- function(Player, season, span=1){
       tables <- xml2::read_html(url) %>%
         rvest::html_table(fill = TRUE)
       table_df <- data.frame(tables[[8]]) %>%
+<<<<<<< HEAD
         dplyr::filter(data.frame(tables[[8]])$Date != "Date")
+=======
+        dplyr::filter(Date != "Date")
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
       table_df[,1:29]
     }
     
@@ -94,11 +101,19 @@ getStatsPerGame <- function(Player, season, span=1){
     tables <- xml2::read_html(url) %>%
       rvest::html_table(fill = TRUE)
     table <- data.frame(tables[[8]]) %>%
+<<<<<<< HEAD
       dplyr::filter(data.frame(tables[[8]]) $Date != "Date")
+=======
+      dplyr::filter(Date != "Date")
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
   }
   names(table) <- c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "Var.8", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP",  "FT", 
     "FTA", "FTP", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GameScore", "PlusMinus")
   table %>% 
+<<<<<<< HEAD
     dplyr::select(c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP",  "FT", 
+=======
+    select(c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP",  "FT", 
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
              "FTA", "FTP", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GameScore", "PlusMinus"))
 }

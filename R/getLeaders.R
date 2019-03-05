@@ -7,8 +7,11 @@
 #' 
 #' @author Koki Ando
 #' 
+<<<<<<< HEAD
 #' @importFrom magrittr %>%
 #' 
+=======
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 #' @return This function returns \code{data.frame} including columns:
 #' \itemize{
 #'  \item Rank

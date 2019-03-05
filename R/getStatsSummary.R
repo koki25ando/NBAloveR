@@ -1,6 +1,7 @@
 #' Career summary stats for a given player
 #' 
 #' Function for getting given player's career summary stats
+<<<<<<< HEAD
 #' 
 #' @param Name The name of the player to fetch information for
 #' 
@@ -8,6 +9,13 @@
 #' 
 #' @importFrom magrittr %>%
 #' 
+=======
+#' 
+#' @param Name The name of the player to fetch information for
+#' 
+#' @author Koki Ando <koki.25.ando@gmail.com>
+#' 
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 #' @seealso \url{https://www.basketball-reference.com}
 #' 
 #' @return This function returns \code{data.frame} including columns:
@@ -45,7 +53,11 @@
 #' 
 #' @examples
 #' \dontrun{
+<<<<<<< HEAD
 #'   getStatsSummary(Name = "Kobe Bryant")
+=======
+#'   getStatsSummary("Kobe Bryant")
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 #' }
 #' 
 #' @export
@@ -62,5 +74,9 @@ getStatsSummary <- function (Name) {
     xml2::read_html() %>%
     rvest::html_table()
   tables[[1]] %>% 
+<<<<<<< HEAD
     dplyr::filter(tables[[1]]$Season=="Career")
+=======
+    dplyr::filter(Season=="Career")
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 }

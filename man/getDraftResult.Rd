@@ -23,8 +23,12 @@ Function to get draft result
 }
 \examples{
 \dontrun{
+<<<<<<< HEAD
   draft09 <- getDraftResult(year = 1999)
   draft09 <- getDraftResult(year = 2006)
+=======
+  draft09 <- getDraftResult(year = 2009)
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
   head(draft09)
 }
 

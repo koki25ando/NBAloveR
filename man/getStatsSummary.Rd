@@ -48,7 +48,11 @@ Function for getting given player's career summary stats
 }
 \examples{
 \dontrun{
+<<<<<<< HEAD
   getStatsSummary(Name = "Kobe Bryant")
+=======
+  getStatsSummary("Kobe Bryant")
+>>>>>>> a326d2ccc47dec97d5501539f2a2846eed11a994
 }
 
 }
