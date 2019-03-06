@@ -21,14 +21,14 @@ This function returns \code{data.frame} including columns:
  \item Finish
  \item SRS
  \item Pace
- \item Rel Page
+ \item RelativePage
  \item ORtg
- \item Rel ORtg
+ \item RelativeORtg
  \item DRtg
- \item Rel DRtg
+ \item RelativeDRtg
  \item Playoffs
  \item Coaches
- \item Top WS
+ \item TopWinShare
 }
 }
 \description{
@@ -36,7 +36,7 @@ Function that allows you to get team history data
 }
 \examples{
 \dontrun{
-  BostonCeltics <- getTeamHistory(team_code = "BOS")
+  BostonCeltics <- getTeamHistory(team_code = "bos")
   head(BostonCeltics)
 }
 
@@ -45,5 +45,5 @@ Function that allows you to get team history data
 \url{https://www.basketball-reference.com/teams/BOS/}
 }
 \author{
-Koki Ando
+Koki Ando <koki.25.ando@gmai.com>
 }

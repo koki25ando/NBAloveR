@@ -28,8 +28,8 @@
 #' 
 #' @examples
 #' \dontrun{
-#'  bos08 <- seasonSchedule(Team = "bos", year = 2008)
-#'  head(bos08)
+#'  gsw19 <- seasonSchedule(Team = "gsw", year = 2019)
+#'  head(gsw19)
 #' }
 #' 
 #' @export
