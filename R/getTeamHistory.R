@@ -4,7 +4,7 @@
 #' 
 #' @param team_code Team code consisting of 3 characters to fetch information for
 #' 
-#' @author Koki Ando <koki.25.ando@gmai.com>
+#' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
 #' @seealso \url{https://www.basketball-reference.com/teams/BOS/}
 #' 

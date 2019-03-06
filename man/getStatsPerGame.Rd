@@ -47,7 +47,7 @@ This function returns \code{data.frame} including columns:
 }
 }
 \description{
-Function for getting given player's stas per game
+Function for getting given player's stats per game
 }
 \examples{
 \dontrun{

@@ -4,7 +4,7 @@ author: "Koki Ando"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Intro to NBAloveR}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,9 +16,15 @@ knitr::opts_chunk$set(
 )
 ```
 
+This vignettes provides a quick tour of the R package "NBAloveR".
+
 # Installation
 
 ```{r}
+# If you want access to latest version, use install_github() function
+# devtools::install_github("koki25ando/NBAloveR")
+# install.packages("NBAloveR")
 library(NBAloveR)
 ```
+
 

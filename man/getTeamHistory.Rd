@@ -45,5 +45,5 @@ Function that allows you to get team history data
 \url{https://www.basketball-reference.com/teams/BOS/}
 }
 \author{
-Koki Ando <koki.25.ando@gmai.com>
+Koki Ando <koki.25.ando@gmail.com>
 }

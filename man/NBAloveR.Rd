@@ -4,10 +4,10 @@
 \name{NBAloveR}
 \alias{NBAloveR}
 \alias{NBAloveR-package}
-\title{NBaloveR: Provides data access to Basketball data}
+\title{NBaloveR: Provides data access to basketball data}
 \description{
-R package that provides an interdace to online basketball data. This package allows R users to download
-publicly available data on basketball website such as Basketball Reference <>, NBA Draft<>
+R package that provides an interface to online basketball data. This package allows R users to download
+publicly available data on basketball.
 }
 \author{
 Koki Ando \email{koki.25.ando@gmail.com}

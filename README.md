@@ -18,6 +18,6 @@ Data you can get using this package are from following websites.
 + [RealGM](https://basketball.realgm.com/)
 
 ## Hands-on Tutorial
-Visit [my blog posts](http://kokiando.hatenablog.com/entry/2018/09/10/121855) to learn more about NBAloveR packge!
+Visit [my blog posts](http://kokiando.hatenablog.com/entry/2018/09/10/121855) to learn more about NBAloveR package!
 + [Introducing "NBAloveR"](http://kokiando.hatenablog.com/entry/2018/09/10/121855)
 + [NBAloveR is now updated!](http://kokiando.hatenablog.com/entry/2018/12/23/202938)

@@ -1,6 +1,6 @@
 #' Stats Per Game for a given player
 #' 
-#' Function for getting given player's stas per game
+#' Function for getting given player's stats per game
 #'
 #' @param Player The name of the player to fetch information for
 #' @param season NBA season number
