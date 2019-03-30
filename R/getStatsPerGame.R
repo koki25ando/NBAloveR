@@ -44,7 +44,7 @@
 #' 
 #' @examples
 #' \dontrun{
-#' kobe08 <- getStatsPerGame(Player="Kobe Bryant", season="2008")
+#' kobe08 <- getStatsPerGame(Player="Kobe Bryant", season=2008)
 #' head(kobe08)
 #' }
 #'
@@ -66,7 +66,7 @@ getStatsPerGame <- function(Player, season, span=1){
     url_list <- paste0(head_url, paste0(substr(strsplit(Player, " ")[[1]][2], 0,1), "/",
                                         substr(strsplit(Player, " ")[[1]][2], 1,5),
                                         substr(strsplit(Player, " ")[[1]][1], 0,2),
-                                        end_url, season:paste0(season+span), "/")) %>% 
+                                        end_url, season:paste0(as.numeric(season)+as.numeric(span)), "/")) %>% 
       stringr::str_to_lower()
     
     get_stats_scarping_script <- function(url) {
@@ -82,7 +82,7 @@ getStatsPerGame <- function(Player, season, span=1){
     return(data.df)
     
   } else if(span == 0) {
-    print("span hast be greater than 0")
+    warning("span has to be greater than 0")
   } else {
     tail_url <- paste0(substr(strsplit(Player, " ")[[1]][2], 0,1), "/",
                        substr(strsplit(Player, " ")[[1]][2], 1,5),
@@ -96,9 +96,14 @@ getStatsPerGame <- function(Player, season, span=1){
     table <- data.frame(tables[[8]]) %>%
       dplyr::filter(data.frame(tables[[8]]) $Date != "Date")
   }
-  names(table) <- c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "Var.8", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP",  "FT", 
-    "FTA", "FTP", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GameScore", "PlusMinus")
+  
+  
+  table <- table %>% 
+    dplyr::select(c("Rk", "G", "Date", "Age", "Tm", "Var.6", "Opp", "GS", "MP", "FG", "FGA", "FG.", "X3P", "X3PA", "X3P.",  "FT", 
+             "FTA", "FT.", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GmSc", "X..."))
+  names(table) <- c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP", 
+                    "FT", "FTA",  "FTP",  "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GameScore", "PlusMinus")
   table %>% 
-    dplyr::select(c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP",  "FT", 
-             "FTA", "FTP", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GameScore", "PlusMinus"))
+    dplyr::filter(GS != "Inactive",
+                  GS != "Did Not Dress")
 }

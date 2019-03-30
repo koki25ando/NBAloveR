@@ -51,7 +51,7 @@ Function for getting given player's stats per game
 }
 \examples{
 \dontrun{
-kobe08 <- getStatsPerGame(Player="Kobe Bryant", season="2008")
+kobe08 <- getStatsPerGame(Player="Kobe Bryant", season=2008)
 head(kobe08)
 }
 
