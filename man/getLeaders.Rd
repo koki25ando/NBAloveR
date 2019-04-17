@@ -36,5 +36,5 @@ Function for getting data of stats leaders of each season
 \url{https://www.basketball-reference.com/leaders/}
 }
 \author{
-Koki Ando
+Koki Ando <koki.25.ando@gmail.com>
 }
