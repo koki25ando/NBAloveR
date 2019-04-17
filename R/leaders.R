@@ -5,7 +5,7 @@
 #' @param stats_type Stats type you want to fetch information for
 #' @param range Duration of data. Valid values are Career, Active or Single Season.
 #' 
-#' @author Koki Ando
+#' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
 #' @importFrom magrittr %>%
 #' 
@@ -63,7 +63,7 @@ getLeaders <- function(stats_type = c("3PM", "2PM", "3PA", "2PA", "PTS", "AST", 
 #' @param stats_type Stats type to fetch information for
 #' @param RegularSeason Regular season or not. Valid values are TRUE or FALSE
 #' 
-#' @author Koki Ando
+#' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
 #' @importFrom magrittr %>%
 #' 
