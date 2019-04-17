@@ -1,4 +1,7 @@
-# NBAloveR 0.1.3.2
+#  NBAloveR 0.1.3.3
+Minor updates. Bugs reported from the previous versions were fixed. (04/18/2019)
+
+## NBAloveR 0.1.3.2
 Minor updates. Bugs reported from the previous versions were fixed. (03/06/2019)
 
 ## NBAloveR 0.1.3.1
