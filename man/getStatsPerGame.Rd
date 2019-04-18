@@ -11,7 +11,7 @@ getStatsPerGame(player, season, span = 1)
 
 \item{season}{Season number}
 
-\item{span}{Duration of season. Defaults 1.}
+\item{span}{Duration of season(s). Defaults 1.}
 }
 \value{
 This function returns \code{data.frame} including columns:

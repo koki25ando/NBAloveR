@@ -4,7 +4,7 @@
 #'
 #' @param player Player name to fetch information for
 #' @param season Season number
-#' @param span Duration of season. Defaults 1.
+#' @param span Duration of season(s). Defaults 1.
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
@@ -92,11 +92,11 @@ getStatsPerGame <- function(player, season, span=1){
 }
 
 
-#' Career summary stats for a given player
+#' Career Stats Summary
 #' 
-#' Function for getting given player's career summary stats
+#' Career stats summary of a given player
 #' 
-#' @param Name The name of the player to fetch information for
+#' @param player Player name
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
@@ -141,21 +141,18 @@ getStatsPerGame <- function(player, season, span=1){
 #' 
 #' @examples
 #' \dontrun{
-#'  kobe_summary  = getStatsSummary(Name = "Kobe Bryant")
+#'  kobe_summary  = getStatsSummary(player = "Kobe Bryant")
 #'  head(kobe_summary)
 #' }
 #' 
 #' @export
-getStatsSummary <- function (Name) {
+getStatsSummary <- function (player) {
+  
   head_url = "https://www.basketball-reference.com/players/"
-  tail_url = "01.html"
+  player_key = player_key_generation(player)
+  url = paste0(head_url, player_key, ".html")
   
-  player_key <- paste0(substr(strsplit(Name, " ")[[1]][2], 0,1), "/",
-                       substr(strsplit(Name, " ")[[1]][2], 1,5),
-                       substr(Name, 1,2)) %>%
-    stringr::str_to_lower()
-  
-  tables <- paste0(head_url, player_key, tail_url) %>%
+  tables <- url %>%
     xml2::read_html() %>%
     rvest::html_table()
   tables[[1]] %>% 
@@ -167,8 +164,8 @@ getStatsSummary <- function (Name) {
 #' 
 #' Easy stats comparison function, which includes simple line and point plots
 #' 
-#' @param player_list List of names of players.
-#' @param Age Age valid values are TRUE or FALSE
+#' @param player_list List of players
+#' @param age Age. valid values are TRUE or FALSE
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
@@ -178,27 +175,23 @@ getStatsSummary <- function (Name) {
 #'
 #' @examples
 #' \dontrun{
-#'   statsCompare(c("Kevin Durant", "Russel Westbrook", "James Harden"), Age=FALSE)
+#'   statsCompare(player_list = c("Ray Allen", "Klay Thompson", "Stephen Curry"), Age=TRUE)
 #' }
 #'
 #' @export
 
-statsCompare <- function(player_list = c(), Age=FALSE) {
+statsCompare <- function(player_list = c(), age=FALSE) {
   
-  player_key_list = list()
+  player_url = list()
   plyaer_career = list()
   head_url = "https://www.basketball-reference.com/players/"
-  tail_url = "01.html"
-  
+
   for (i in 1:length(player_list)){
-    player_key_list[i] <- paste0(substr(strsplit(player_list[i], " ")[[1]][2], 0,1), "/",
-                                 substr(strsplit(player_list[i], " ")[[1]][2], 1,5),
-                                 substr(player_list[i], 1,2)) %>%
-      stringr::str_to_lower()
+    player_url[i] <- paste0(head_url, player_key_generation(player_list[[i]]), ".html")
   }
   
-  for (i in 1:length(player_key_list)){
-    plyaer_career[i] <- paste0(head_url, player_key_list[[i]][1], tail_url) %>%
+  for (i in 1:length(player_url)){
+    plyaer_career[i] <- player_url[[i]] %>%
       xml2::read_html() %>%
       rvest::html_table()
     plyaer_career[[i]] = plyaer_career[[i]][plyaer_career[[i]]$Age != "NA", ]
@@ -211,7 +204,7 @@ statsCompare <- function(player_list = c(), Age=FALSE) {
   point_plot_syn = list()
   line_plot_syn = list()
   
-  if (Age==FALSE) {
+  if (age==FALSE) {
     for ( i in 1:length(plyaer_career)){
       point_plot_syn[[i]] <-
         ggplot2::geom_point(data = plyaer_career[[i]],

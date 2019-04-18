@@ -2,12 +2,12 @@
 % Please edit documentation in R/stats.R
 \name{getStatsSummary}
 \alias{getStatsSummary}
-\title{Career summary stats for a given player}
+\title{Career Stats Summary}
 \usage{
-getStatsSummary(Name)
+getStatsSummary(player)
 }
 \arguments{
-\item{Name}{The name of the player to fetch information for}
+\item{player}{Player name}
 }
 \value{
 This function returns \code{data.frame} including columns:
@@ -44,11 +44,11 @@ This function returns \code{data.frame} including columns:
 }
 }
 \description{
-Function for getting given player's career summary stats
+Career stats summary of a given player
 }
 \examples{
 \dontrun{
- kobe_summary  = getStatsSummary(Name = "Kobe Bryant")
+ kobe_summary  = getStatsSummary(player = "Kobe Bryant")
  head(kobe_summary)
 }
 

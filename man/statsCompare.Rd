@@ -4,12 +4,12 @@
 \alias{statsCompare}
 \title{Visualization of Stats comparison}
 \usage{
-statsCompare(player_list = c(), Age = FALSE)
+statsCompare(player_list = c(), age = FALSE)
 }
 \arguments{
-\item{player_list}{List of names of players.}
+\item{player_list}{List of players}
 
-\item{Age}{Age valid values are TRUE or FALSE}
+\item{age}{Age. valid values are TRUE or FALSE}
 }
 \value{
 This function returns a point and line plot showing transitions of PPG stats of given players.
@@ -19,7 +19,7 @@ Easy stats comparison function, which includes simple line and point plots
 }
 \examples{
 \dontrun{
-  statsCompare(c("Kevin Durant", "Russel Westbrook", "James Harden"), Age=FALSE)
+  statsCompare(player_list = c("Ray Allen", "Klay Thompson", "Stephen Curry"), Age=TRUE)
 }
 
 }
