@@ -2,31 +2,33 @@
 % Please edit documentation in R/leaders.R
 \name{getStatsLeader}
 \alias{getStatsLeader}
-\title{Stats Leaders}
+\title{Stats Leader}
 \usage{
-getStatsLeader(stats_type = c("PTS", "AST", "STL", "BLK", "FG2", "FG3"),
-  RegularSeason = TRUE)
+getStatsLeader(stats_type = c("PTS", "G", "MP", "FG", "FT", "TRB", "AST",
+  "STL", "BLK", "TOV", "PF", "FG3"), period = c("career", "season",
+  "game"))
 }
 \arguments{
-\item{stats_type}{Stats type to fetch information for}
+\item{stats_type}{Stats type. PTS, G, MP, FG, FT, TRB, AST, STL, BLK, TOV, PF or FG3}
 
-\item{RegularSeason}{Regular season or not. Valid values are TRUE or FALSE}
+\item{period}{Period. career, season or game}
 }
 \value{
 This function returns \code{data.frame} including columns:
 \itemize{
- \item Rank
  \item Player
- \item PTS
  \item Season
+ \item stats
+ \item value
+ \item period
 }
 }
 \description{
-Function for getting stats leader
+Stats Leader data
 }
 \examples{
 \dontrun{
- pts_leader = getStatsLeader(stats_type = "PTS", RegularSeason = TRUE)
+ pts_leader = getStatsLeader(stats_type = "PTS", period = "season")
  head(pts_leader)
 }
 
