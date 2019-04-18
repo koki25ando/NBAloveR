@@ -1,6 +1,6 @@
 Package: NBAloveR
 Title: Help Basketball Data Analysis
-Version: 0.1.3.2
+Version: 0.1.3.3
 Authors@R: person("Koki", "Ando", email = "koki.25.ando@gmail.com", role = c("aut", "cre"))
 Description: Provides support for users to analyze basketball.
 Depends: R (>= 3.1)
