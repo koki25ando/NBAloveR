@@ -99,3 +99,4 @@ getStatsLeader <- function (stats_type = c("PTS", "AST", "STL", "BLK", "FG2", "F
   table$Player <- stringr::str_remove(table$Player, "\\*")
   table[, 2:4]
 }
+

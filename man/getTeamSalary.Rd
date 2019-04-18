@@ -2,34 +2,25 @@
 % Please edit documentation in R/team.R
 \name{getTeamSalary}
 \alias{getTeamSalary}
-\title{Salary data for a given team}
+\title{Players' Salary}
 \usage{
 getTeamSalary(team_code)
 }
 \arguments{
 \item{team_code}{Team code consisting of 3 characters to fetch information for}
 }
-\value{
-This function returns \code{data.frame} including columns:
-\itemize{
- \item Player
- \item Season
- \item Signed Using
- \item Guaranteed
-}
-}
 \description{
-Function that allows you to get salary data of each team
+Players' salary data for a given team
 }
 \examples{
 \dontrun{
- salary_gsw <- getTeamSalary(team_code = "phi")
- head(salary_gsw)
+ salary_phi <- getTeamSalary(team_code = "phi")
+ head(salary_phi)
 }
 
 }
 \seealso{
-\url{https://www.basketball-reference.com/contracts/GSW.html}
+\url{https://www.basketball-reference.com/contracts/}
 }
 \author{
 Koki Ando <koki.25.ando@gmail.com>

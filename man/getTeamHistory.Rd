@@ -2,7 +2,7 @@
 % Please edit documentation in R/team.R
 \name{getTeamHistory}
 \alias{getTeamHistory}
-\title{Franchise history data for a given team}
+\title{Franchise History Data}
 \usage{
 getTeamHistory(team_code)
 }
@@ -32,7 +32,7 @@ This function returns \code{data.frame} including columns:
 }
 }
 \description{
-Function that allows you to get team history data
+Franchise's season data
 }
 \examples{
 \dontrun{
@@ -42,7 +42,7 @@ Function that allows you to get team history data
 
 }
 \seealso{
-\url{https://www.basketball-reference.com/teams/BOS/}
+\url{https://www.basketball-reference.com/teams/}
 }
 \author{
 Koki Ando <koki.25.ando@gmail.com>

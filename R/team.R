@@ -1,25 +1,17 @@
-#' Salary data for a given team
+#' Players' Salary
 #' 
-#' Function that allows you to get salary data of each team
+#' Players' salary data for a given team
 #'
 #' @param team_code Team code consisting of 3 characters to fetch information for
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
-#' @seealso \url{https://www.basketball-reference.com/contracts/GSW.html}
-#' 
-#' @return This function returns \code{data.frame} including columns:
-#' \itemize{
-#'  \item Player
-#'  \item Season
-#'  \item Signed Using
-#'  \item Guaranteed
-#' }
+#' @seealso \url{https://www.basketball-reference.com/contracts/}
 #' 
 #' @examples
 #' \dontrun{
-#'  salary_gsw <- getTeamSalary(team_code = "phi")
-#'  head(salary_gsw)
+#'  salary_phi <- getTeamSalary(team_code = "phi")
+#'  head(salary_phi)
 #' }
 #'
 #' @export
@@ -30,19 +22,19 @@ getTeamSalary <- function (team_code) {
   tables <- rvest::html_table(tables)
   df <- as.data.frame(tables[[1]])
   colnames(df) <- df[1,]
-  df[-1,]
+  df[-1,] %>% 
+    dplyr::filter(Player != "")
 }
 
-
-#' Franchise history data for a given team
+#' Franchise History Data
 #' 
-#' Function that allows you to get team history data
+#' Franchise's season data
 #' 
 #' @param team_code Team code consisting of 3 characters to fetch information for
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
-#' @seealso \url{https://www.basketball-reference.com/teams/BOS/}
+#' @seealso \url{https://www.basketball-reference.com/teams/}
 #' 
 #' @return This function returns \code{data.frame} including columns:
 #' \itemize{
