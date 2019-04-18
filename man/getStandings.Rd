@@ -26,7 +26,7 @@ This function returns \code{data.fram} including columns:
 }
 }
 \description{
-Function to get historical league standings
+Standing data
 }
 \examples{
 \dontrun{

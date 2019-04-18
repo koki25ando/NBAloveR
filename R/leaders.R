@@ -37,9 +37,9 @@ getStatsLeader = function(stats_type = c("PTS", "G", "MP", "FG", "FT", "TRB", "A
     rvest::html_table()
   table <- data.frame(tables[[1]])
   table$Player <- stringr::str_remove(table$Player, "\\*")
-  main_df = table[, 2:4] %>% 
-    gather(key = "stats", value = "value", -Season, -Player) %>% 
-    mutate(period = period)
+  dat = table[, 2:4]
+  main_df = dat %>% 
+    tidyr::gather(key = "stats", value = "value", -'Season', -'Player') %>% 
+    dplyr::mutate(period = period)
   main_df
 }
-

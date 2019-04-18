@@ -1,13 +1,12 @@
 #' Standing Data
 #' 
-#' Function to get historical league standings
+#' Standing data
 #' 
 #' @param year Season number consisting 4 digits
 #' @param conf Conference to fetch information for. Valid values are East, West or All
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
-
 #' @importFrom magrittr %>%
 #' 
 #' @seealso \url{https://www.basketball-reference.com/leagues/NBA_2019_standings.html}

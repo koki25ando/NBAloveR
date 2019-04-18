@@ -84,11 +84,11 @@ getStatsPerGame <- function(player, season, span=1){
     warning("span has to be greater than 0")
   }
   output_table = output_table %>% 
-    dplyr::select(-Rk, -'Var.8')
+    dplyr::select(-'Rk', -'Var.8')
   names(output_table)[c(5, 11:14, 17)] = c("Home", "FGP", "3PM", "3PA", "3PP", "FTP")
   output_table %>% 
-    dplyr::filter(GS != "Inactive",
-                  GS != "Did Not Dress")
+    dplyr::filter(output_table$GS != "Inactive",
+                  output_table$GS != "Did Not Dress")
 }
 
 
