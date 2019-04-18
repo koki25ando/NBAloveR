@@ -15,7 +15,7 @@ statsCompare(player_list = c(), Age = FALSE)
 This function returns a point and line plot showing transitions of PPG stats of given players.
 }
 \description{
-Easy stats comparison function, which also includes simple line and point plots
+Easy stats comparison function, which includes simple line and point plots
 }
 \examples{
 \dontrun{

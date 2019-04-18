@@ -2,9 +2,9 @@
 #' 
 #' Function for getting given player's stats per game
 #'
-#' @param Player The name of the player to fetch information for
-#' @param season NBA season number
-#' @param span Duration of data
+#' @param player Player name to fetch information for
+#' @param season Season number
+#' @param span Duration of season. Defaults 1.
 #' 
 #' @author Koki Ando <koki.25.ando@gmail.com>
 #' 
@@ -38,72 +38,55 @@
 #'  \item TOV
 #'  \item PF
 #'  \item PTS
-#'  \item GameScore
-#'  \item PlusMinus
+#'  \item GmSc
 #' }
 #' 
 #' @examples
 #' \dontrun{
-#' kobe08 <- getStatsPerGame(Player="Kobe Bryant", season=2008)
-#' head(kobe08)
+#' RayAllen <- getStatsPerGame(player="Ray Allen", season=2008, span=1)
+#' head(RayAllen)
 #' }
 #'
 #' @export
 
-getStatsPerGame <- function(Player, season, span=1){
+getStatsPerGame <- function(player, season, span=1){
   
-  if (Player == "Ray Allen") {
-    end_url <- "02/gamelog/"
-  } else if (Player == "Joe Johnson") {
-    end_url <- "02/gamelog/"
-  } else {
-    end_url <- "01/gamelog/"
-  }
-  
+  # Setting
   head_url <- "https://www.basketball-reference.com/players/"
+  player_key = player_key_generation(player)
+  end_url <- "/gamelog/"
+  url_list <- paste0(head_url, player_key, end_url, season:(season+span-1), "/")
   
-  if (span > 1) {
-    url_list <- paste0(head_url, paste0(substr(strsplit(Player, " ")[[1]][2], 0,1), "/",
-                                        substr(strsplit(Player, " ")[[1]][2], 1,5),
-                                        substr(strsplit(Player, " ")[[1]][1], 0,2),
-                                        end_url, season:paste0(as.numeric(season)+as.numeric(span)), "/")) %>% 
-      stringr::str_to_lower()
-    
-    get_stats_scarping_script <- function(url) {
-      tables <- xml2::read_html(url) %>%
-        rvest::html_table(fill = TRUE)
-      table_df <- data.frame(tables[[8]]) %>%
-        dplyr::filter(data.frame(tables[[8]])$Date != "Date")
-      table_df[,1:29]
-    }
-    
-    data_list <- apply(data.frame(url_list), 1, get_stats_scarping_script)
-    data.df <- do.call(rbind, data_list)
-    return(data.df)
-    
-  } else if(span == 0) {
-    warning("span has to be greater than 0")
-  } else {
-    tail_url <- paste0(substr(strsplit(Player, " ")[[1]][2], 0,1), "/",
-                       substr(strsplit(Player, " ")[[1]][2], 1,5),
-                       substr(strsplit(Player, " ")[[1]][1], 0,2),
-                       end_url, season, "/") %>% 
-      stringr::str_to_lower()
-    url <- paste0(head_url, tail_url)
-    
+  
+  if (length(url_list) == 1){
+    url = url_list
     tables <- xml2::read_html(url) %>%
       rvest::html_table(fill = TRUE)
-    table <- data.frame(tables[[8]]) %>%
+    main_df = data.frame(tables[[8]]) %>%
       dplyr::filter(data.frame(tables[[8]]) $Date != "Date")
+    output_table = main_df[,1:29]
+  } else if (length(url_list) > 1) {
+    
+    dt_list = list()
+    for (i in 1:length(url_list)){
+      url = url_list[[i]]
+      tables <- xml2::read_html(url) %>%
+        rvest::html_table(fill = TRUE)
+      table <- data.frame(tables[[8]]) %>%
+        dplyr::filter(data.frame(tables[[8]]) $Date != "Date")
+      
+      dt_list[[i]] = table
+    }
+    
+    main_df = do.call(rbind, dt_list)
+    output_table = main_df[,1:29]
+  } else {
+    warning("span has to be greater than 0")
   }
-  
-  
-  table <- table %>% 
-    dplyr::select(c("Rk", "G", "Date", "Age", "Tm", "Var.6", "Opp", "GS", "MP", "FG", "FGA", "FG.", "X3P", "X3PA", "X3P.",  "FT", 
-                    "FTA", "FT.", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GmSc", "X..."))
-  names(table) <- c("Rk", "G", "Date", "Age", "Tm", "Home", "Opp", "GS", "MP", "FG", "FGA", "FGP", "3PM", "3PA", "3PP", 
-                    "FT", "FTA",  "FTP",  "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", "GameScore", "PlusMinus")
-  table %>% 
+  output_table = output_table %>% 
+    dplyr::select(-Rk, -'Var.8')
+  names(output_table)[c(5, 11:14, 17)] = c("Home", "FGP", "3PM", "3PA", "3PP", "FTP")
+  output_table %>% 
     dplyr::filter(GS != "Inactive",
                   GS != "Did Not Dress")
 }
@@ -182,7 +165,7 @@ getStatsSummary <- function (Name) {
 
 #' Visualization of Stats comparison
 #' 
-#' Easy stats comparison function, which also includes simple line and point plots
+#' Easy stats comparison function, which includes simple line and point plots
 #' 
 #' @param player_list List of names of players.
 #' @param Age Age valid values are TRUE or FALSE
@@ -200,7 +183,7 @@ getStatsSummary <- function (Name) {
 #'
 #' @export
 
-statsCompare <- function(player_list = c(), Age=FALSE ) {
+statsCompare <- function(player_list = c(), Age=FALSE) {
   
   player_key_list = list()
   plyaer_career = list()

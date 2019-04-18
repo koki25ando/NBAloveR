@@ -4,14 +4,14 @@
 \alias{getStatsPerGame}
 \title{Stats Per Game for a given player}
 \usage{
-getStatsPerGame(Player, season, span = 1)
+getStatsPerGame(player, season, span = 1)
 }
 \arguments{
-\item{Player}{The name of the player to fetch information for}
+\item{player}{Player name to fetch information for}
 
-\item{season}{NBA season number}
+\item{season}{Season number}
 
-\item{span}{Duration of data}
+\item{span}{Duration of season. Defaults 1.}
 }
 \value{
 This function returns \code{data.frame} including columns:
@@ -42,8 +42,7 @@ This function returns \code{data.frame} including columns:
  \item TOV
  \item PF
  \item PTS
- \item GameScore
- \item PlusMinus
+ \item GmSc
 }
 }
 \description{
@@ -51,8 +50,8 @@ Function for getting given player's stats per game
 }
 \examples{
 \dontrun{
-kobe08 <- getStatsPerGame(Player="Kobe Bryant", season=2008)
-head(kobe08)
+RayAllen <- getStatsPerGame(player="Ray Allen", season=2008, span=1)
+head(RayAllen)
 }
 
 }

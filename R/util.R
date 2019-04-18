@@ -1,4 +1,4 @@
-#' Util
+# Utilities
 
 player_key_generation = function(input){
   head_url = "https://www.basketball-reference.com/players/"
