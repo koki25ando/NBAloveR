@@ -1,4 +1,4 @@
-#' NBaloveR: Provides data access to basketball data
+#' NBAloveR: Provides data access to basketball data
 #' 
 #' R package that provides an interface to online basketball data. This package allows R users to download
 #' publicly available data on basketball.
