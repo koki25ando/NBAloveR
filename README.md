@@ -3,13 +3,18 @@
 "NBAloveR" is an R package that helps you analyze basketball data easily using statistical software tool, R.
 
 [koki25ando/NBAloveR](https://rdrr.io/github/koki25ando/NBAloveR/)
+[CRAN Official Page](https://cran.r-project.org/web/packages/NBAloveR/index.html)
 
 ## Installation
 
 ```{r}
-devtools::install_github("koki25ando/NBAloveR")
+# devtools::install_github("koki25ando/NBAloveR")
+install.packages("NBAloveR")
 library(NBAloveR)
 ```
+
+## Official Document
++ [Package "NBAloveR"](https://cran.r-project.org/web/packages/NBAloveR/NBAloveR.pdf)
 
 ## Data Source
 Data you can get using this package are from following websites.
