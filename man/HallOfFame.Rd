@@ -4,13 +4,15 @@
 \name{HallOfFame}
 \alias{HallOfFame}
 \title{HallOfFame data set}
-\format{A data.frame with 4 columns
+\format{
+A data.frame with 4 columns
 \describe{
  \item{Year}{Year}
  \item{Inductee}{Name of inductee}
  \item{Pos}{Position}
  \item{Achievements}{Achievements}
-}}
+}
+}
 \source{
 wikipedia
 }

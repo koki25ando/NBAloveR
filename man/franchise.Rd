@@ -4,7 +4,8 @@
 \name{franchise}
 \alias{franchise}
 \title{franchise data set}
-\format{A data.frame with 13 columns
+\format{
+A data.frame with 13 columns
 \describe{
  \item{Franchise}{Franchise name}
  \item{Lg}{League}
@@ -19,7 +20,8 @@
  \item{Division}{Division titles}
  \item{Conference}{Conference titles}
  \item{Champions}{Champions}
-}}
+}
+}
 \source{
 Basketball Reference
 }
