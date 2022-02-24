@@ -14,7 +14,7 @@ getStandings(year, conf = c("East", "West", "All"))
 \value{
 This function returns \code{data.fram} including columns:
 \itemize{
-  \item {"Team"}{}
+  \item {"Team"}{Team}
   \item {"W"}{Wins}
   \item {"L"}{Losses}
   \item {"Per"}{Win-Loss Percentage}
