@@ -3,6 +3,8 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/NBAloveR)](https://cran.r-project.org/package=NBAloveR)
 [![Rdoc](http://www.rdocumentation.org/badges/version/NBAloveR)](http://www.rdocumentation.org/packages/NBAloveR)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/NBAloveR)](http://www.r-pkg.org/pkg/NBAloveR)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/NBAloveR)](http://cranlogs.r-pkg.org/badges/grand-total/NBAloveR)
 
 "NBAloveR" is an R package that helps you analyze basketball data easily using statistical software tool, R.
 
