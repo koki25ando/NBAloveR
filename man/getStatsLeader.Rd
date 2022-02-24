@@ -4,9 +4,11 @@
 \alias{getStatsLeader}
 \title{Stats Leader}
 \usage{
-getStatsLeader(stats_type = c("PTS", "G", "MP", "FG", "FT", "TRB", "AST",
-  "STL", "BLK", "TOV", "PF", "FG3"), period = c("career", "season",
-  "game"))
+getStatsLeader(
+  stats_type = c("PTS", "G", "MP", "FG", "FT", "TRB", "AST", "STL", "BLK", "TOV", "PF",
+    "FG3"),
+  period = c("career", "season", "game")
+)
 }
 \arguments{
 \item{stats_type}{Stats type. PTS, G, MP, FG, FT, TRB, AST, STL, BLK, TOV, PF or FG3}

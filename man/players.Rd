@@ -4,7 +4,8 @@
 \name{players}
 \alias{players}
 \title{players data set}
-\format{A data.frame with 13 columns
+\format{
+A data.frame with 13 columns
 \describe{
  \item{Player}{Name of Player}
  \item{POS}{Position of given player}
@@ -19,7 +20,8 @@
  \item{Nationality}{Nationality}
  \item{Year}{Year}
  \item{RookieYear}{Rookie year}
-}}
+}
+}
 \source{
 Basketball Real GM
 }
