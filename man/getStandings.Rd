@@ -14,15 +14,15 @@ getStandings(year, conf = c("East", "West", "All"))
 \value{
 This function returns \code{data.fram} including columns:
 \itemize{
-  \item {"Team"}{Team}
-  \item {"W"}{Wins}
-  \item {"L"}{Losses}
-  \item {"Per"}{Win-Loss Percentage}
-  \item {"GB"}{Games Behind}
-  \item {"PW"}{Pythagorean Wins, expected wins based on points scored and allowed}
-  \item {"PL"}{Pythagorean Lossed, expected losses based on points scored and allowed}
-  \item {"PSG"}{Points Per Game}
-  \item {"PAG"}{Opponent Points Per Game}
+  \item{"Team"} - Team
+  \item{"W"} - Wins
+  \item{"L"} - Losses
+  \item{"Per"} - Win-Loss Percentage
+  \item{"GB"} - Games Behind
+  \item{"PW"} - Pythagorean Wins, expected wins based on points scored and allowed
+  \item{"PL"} - Pythagorean Lossed, expected losses based on points scored and allowed
+  \item{"PSG"} - Points Per Game
+  \item{"PAG"} - Opponent Points Per Game
 }
 }
 \description{

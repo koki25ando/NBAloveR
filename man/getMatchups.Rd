@@ -14,17 +14,17 @@ getMatchups(team_code, season)
 \value{
 This function returns \code{data.frame} including columns:
 \itemize{
- \item {"G"}{Games}
- \item {"Date"}{Date}
- \item {"StartTime"}{Time-zone ET}
- \item {"Opponent"}{Opponent Team}
- \item {"Result"}{Game Result}
- \item {"OT"}{Over Time}
- \item {"Tm"}{Points}
- \item {"Opp"}{Opponent Points}
- \item {"W"}{Wins}
- \item {"L"}{Losses}
- \item {"Streak"}{Streaks}
+ \item{"G"} - Games
+ \item{"Date"} - Date
+ \item{"StartTime"} - Time-zone ET
+ \item{"Opponent"} - Opponent Team
+ \item{"Result"} - Game Result
+ \item{"OT"} - Over Time
+ \item{"Tm"} - Points
+ \item{"Opp"} - Opponent Points
+ \item{"W"} - Wins
+ \item{"L"} - Losses
+ \item{"Streak"} - Streaks
 }
 }
 \description{
