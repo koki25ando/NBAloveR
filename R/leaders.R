@@ -33,7 +33,7 @@ getStatsLeader = function(stats_type = c("PTS", "G", "MP", "FG", "FT", "TRB", "A
   base_url = "https://www.basketball-reference.com/leaders/"
 
   url = paste0(base_url, stringr::str_to_lower(stats_type), "_", stringr::str_to_lower(period), ".html")
-  tables <- xml2::read_html(as.character(url)) %>%
+  tables <- xml2::read_html(url) %>%
     rvest::html_table()
   table <- data.frame(tables[[1]])
   table$Player <- stringr::str_remove(table$Player, "\\*")
