@@ -18,11 +18,11 @@ getStatsLeader(
 \value{
 This function returns \code{data.frame} including columns:
 \itemize{
- \item Player
- \item Season
- \item stats
- \item value
- \item period
+ \item{"Player"} - Player Name
+ \item{"Season"} - Season number
+ \item{"stats"} - Stats Type
+ \item{"value"} - Value of record
+ \item{"period"} - Period. career, season or game.
 }
 }
 \description{
