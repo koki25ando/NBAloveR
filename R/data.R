@@ -23,7 +23,7 @@
 "players"
 
 #' HallOfFame data set
-#' 
+#'
 #' Data set of players in the Naismith Memorial Basketball Hall of Fame
 #'
 #' @format A data.frame with 4 columns
@@ -34,13 +34,13 @@
 #'  \item{Achievements}{Achievements}
 #' }
 #' @source wikipedia
-#' 
+#'
 "HallOfFame"
 
 #' franchise data set
-#' 
+#'
 #' Data set of NBA franchises
-#' 
+#'
 #' @format A data.frame with 13 columns
 #' \describe{
 #'  \item{Franchise}{Franchise name}
@@ -60,3 +60,26 @@
 #' @source Basketball Reference
 #'
 "franchise"
+
+#' player_data data set
+#'
+#' Data set of players information. from https://basketball.realgm.com
+#'
+#' @format A data.frame with 12 columns
+#' \describe{
+#'  \item{Player}{PLayer name}
+#'  \item{Pos}{Position}
+#'  \item{HT}{Height}
+#'  \item{WT}{Weight}
+#'  \item{Age}{Age}
+#'  \item{Teams}{Teams}
+#'  \item{GP}{Games Played}
+#'  \item{YOS}{Year of season}
+#'  \item{Pre-Draft Team}{Pre Draft Team}
+#'  \item{Draft Status}{Draft Status}
+#'  \item{Nationality}{Nationality}
+#'  \item{url}{reference url}
+#' }
+#' @source RealGM
+#'
+"player_data"
